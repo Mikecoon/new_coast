@@ -1,0 +1,98 @@
+#rooms-view .hero {
+  padding-top: 100px;
+  background-image: url("/images/rooms/view/hero.jpg");
+  background-size: cover;
+  background-position: center; }
+  #rooms-view .hero .content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 500px; }
+    #rooms-view .hero .content h1 {
+      color: white;
+      font-size: 36px;
+      line-height: 47px;
+      margin: 0;
+      flex-basis: 50%;
+      flex-grow: 1;
+      max-width: 570px; }
+    #rooms-view .hero .content .price {
+      color: white;
+      font-weight: bold;
+      font-family: "Roboto Slab", serif;
+      font-size: 36px;
+      line-height: 47px;
+      flex-shrink: 0; }
+#rooms-view .room {
+  padding: 100px 0 70px; }
+  #rooms-view .room .param {
+    margin-bottom: 25px; }
+    #rooms-view .room .param .title {
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 19px;
+      color: #333333;
+      margin-bottom: 10px; }
+    #rooms-view .room .param .value {
+      font-size: 14px;
+      line-height: 19px;
+      color: #333333; }
+  #rooms-view .room h2 {
+    margin-top: 0; }
+  #rooms-view .room p {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 30px; }
+  #rooms-view .room .facilities {
+    column-count: 2;
+    column-gap: 50px;
+    padding-left: 0; }
+    #rooms-view .room .facilities li {
+      list-style: none;
+      display: flex;
+      font-size: 16px;
+      line-height: 24px; }
+      #rooms-view .room .facilities li:before {
+        content: '-';
+        margin-right: 10px; }
+#rooms-view .photos {
+  position: relative;
+  margin-bottom: 100px; }
+  #rooms-view .photos .photo {
+    position: relative; }
+    #rooms-view .photos .photo:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: white;
+      opacity: 0.5;
+      content: '';
+      transition: 0.1s opacity; }
+  #rooms-view .photos .tns-controls {
+    display: flex;
+    justify-content: flex-end;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    max-width: 1400px;
+    margin: 0 auto;
+    pointer-events: none; }
+    #rooms-view .photos .tns-controls button {
+      pointer-events: all;
+      padding: 10px;
+      background: none;
+      border: none;
+      display: block; }
+      #rooms-view .photos .tns-controls button img {
+        display: block; }
+      #rooms-view .photos .tns-controls button[data-controls='prev'] {
+        transform: rotate(180deg); }
+  #rooms-view .photos .tns-slide-active + .tns-slide-active:after {
+    opacity: 0; }
+  #rooms-view .photos .tns-slide-active + .tns-slide-active + .tns-slide-active:after {
+    opacity: 0.5; }
+
+/*# sourceMappingURL=view.css.map */

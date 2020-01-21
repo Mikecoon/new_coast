@@ -1,0 +1,18 @@
+#schedule-view .hero {
+  padding-top: 100px;
+  background-image: url("/images/site/schedule/hero.jpg");
+  background-size: cover;
+  background-position: center; }
+  #schedule-view .hero .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 500px; }
+  #schedule-view .hero h1 {
+    color: white;
+    font-size: 36px;
+    line-height: 47px;
+    margin: 0; }
+
+/*# sourceMappingURL=view.css.map */

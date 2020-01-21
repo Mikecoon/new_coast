@@ -1,0 +1,38 @@
+#services-page {
+	 .hero {
+		 background-image: url('/images/services/banquet/hero.jpg');
+	 }
+
+	.content-row {
+
+		.buttons {
+			display: flex;
+			margin-top: 30px;
+
+			.solid {
+				background: #003868;
+				margin-right: 15px;
+				border: 1px solid #003868;
+
+				&:hover {
+					background: white;
+				}
+			}
+
+			.border {
+				border: 1px solid #003868;
+				color: #003868;
+
+				&:hover {
+					background: #003868;
+					color: white;
+				}
+			}
+		}
+
+		.remark {
+			color: #A7ABBE;
+			font-size: 14px;
+		}
+	}
+ }

@@ -1,0 +1,84 @@
+#rooms-index .hero {
+  padding-top: 100px;
+  background-image: url("/images/rooms/index/hero.jpg");
+  background-size: cover;
+  background-position: center; }
+  #rooms-index .hero .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 500px; }
+  #rooms-index .hero h1 {
+    color: white;
+    font-size: 36px;
+    line-height: 47px;
+    margin: 0; }
+  #rooms-index .hero p {
+    max-width: 659px;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    line-height: 20px; }
+#rooms-index .rooms-list {
+  padding: 100px 0; }
+  #rooms-index .rooms-list .content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px; }
+    #rooms-index .rooms-list .content .room {
+      height: 280px;
+      padding: 60px;
+      box-sizing: border-box;
+      position: relative;
+      text-decoration: none;
+      background-size: cover;
+      background-position: center;
+      background-image: url("/images/rooms/index/room.jpg"); }
+      #rooms-index .rooms-list .content .room h3 {
+        font-weight: bold;
+        font-size: 20px;
+        color: white;
+        margin: 0;
+        transition: 0.2s color;
+        position: relative;
+        z-index: 3;
+        display: flex;
+        justify-content: space-between; }
+        #rooms-index .rooms-list .content .room h3 span {
+          flex-shrink: 0;
+          margin-left: 15px; }
+      #rooms-index .rooms-list .content .room .room-content {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        right: 30px;
+        bottom: 30px;
+        background: white;
+        transform: translateY(50px);
+        opacity: 0;
+        transition: 0.2s transform, 0.2s opacity;
+        z-index: 2;
+        padding: 30px;
+        display: flex;
+        align-items: flex-end; }
+        #rooms-index .rooms-list .content .room .room-content .buttons {
+          display: flex;
+          justify-content: space-between;
+          width: 100%; }
+          #rooms-index .rooms-list .content .room .room-content .buttons .btn-book {
+            background: #003868;
+            border-color: #003868;
+            color: white;
+            width: 200px; }
+          #rooms-index .rooms-list .content .room .room-content .buttons .btn-details {
+            border-color: #A7ABBE;
+            color: #A7ABBE;
+            width: 200px; }
+      #rooms-index .rooms-list .content .room:hover h3 {
+        color: #333333; }
+      #rooms-index .rooms-list .content .room:hover .room-content {
+        opacity: 1;
+        transform: translateY(0); }
+
+/*# sourceMappingURL=index.css.map */

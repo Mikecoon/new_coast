@@ -1,0 +1,51 @@
+#services-page .hero {
+  background-image: url("/images/services/events/hero.jpg"); }
+#services-page .content-row {
+  position: relative; }
+  #services-page .content-row .buttons {
+    display: flex;
+    margin-top: 30px; }
+    #services-page .content-row .buttons .solid {
+      background: #003868;
+      margin-right: 15px;
+      border: 1px solid #003868; }
+      #services-page .content-row .buttons .solid:hover {
+        background: white; }
+    #services-page .content-row .buttons .border {
+      border: 1px solid #003868;
+      color: #003868; }
+      #services-page .content-row .buttons .border:hover {
+        background: #003868;
+        color: white; }
+  #services-page .content-row .remark {
+    color: #A7ABBE;
+    font-size: 14px; }
+#services-page .modal {
+  position: fixed;
+  z-index: 25;
+  background-color: rgba(0, 56, 104, 0.84);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+  #services-page .modal:not(.show) {
+    display: none; }
+  #services-page .modal .content {
+    max-width: 600px;
+    height: 605px;
+    margin: 150px auto;
+    background-color: white; }
+#services-page .scheme {
+  padding: 60px 15px; }
+  #services-page .scheme table {
+    width: 100%;
+    border-collapse: collapse; }
+    #services-page .scheme table tbody td {
+      border-bottom: 1px solid #E5E5E5;
+      height: 124px;
+      text-align: center; }
+      #services-page .scheme table tbody td .icon {
+        vertical-align: middle;
+        margin-right: 5px; }
+
+/*# sourceMappingURL=events.css.map */

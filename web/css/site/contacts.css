@@ -1,0 +1,65 @@
+#site-contacts .hero {
+  padding-top: 100px;
+  background-image: url("/images/site/contacts/hero.jpg");
+  background-size: cover;
+  background-position: center; }
+  #site-contacts .hero .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 500px; }
+  #site-contacts .hero h1 {
+    color: white;
+    font-size: 36px;
+    line-height: 47px;
+    margin: 0; }
+  #site-contacts .hero p {
+    max-width: 659px;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    line-height: 20px; }
+#site-contacts .contacts {
+  padding: 100px 0; }
+  #site-contacts .contacts .title {
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 25px;
+    color: #333333;
+    margin-bottom: 10px; }
+  #site-contacts .contacts .value {
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333; }
+    #site-contacts .contacts .value + .title {
+      margin-top: 30px; }
+    #site-contacts .contacts .value a {
+      color: #003868;
+      text-decoration: none;
+      display: inline-block;
+      margin-left: 15px; }
+  #site-contacts .contacts .buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 20px; }
+    #site-contacts .contacts .buttons .btn {
+      background-color: #003868;
+      color: white; }
+    #site-contacts .contacts .buttons img {
+      display: block; }
+    #site-contacts .contacts .buttons .yandex-maps {
+      margin-left: 15px; }
+    #site-contacts .contacts .buttons .google-maps {
+      margin-left: 15px;
+      position: relative;
+      top: -4px; }
+  #site-contacts .contacts .map-image {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto; }
+#site-contacts #map {
+  height: 500px;
+  margin-bottom: 100px; }
+
+/*# sourceMappingURL=contacts.css.map */

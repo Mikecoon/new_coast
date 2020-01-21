@@ -1,0 +1,83 @@
+.book-widget{
+	padding: 25px 0;
+	background: {
+		color: #003868;
+		position: center;
+		size: cover;
+	};
+
+	.content {
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+	}
+
+	h3 {
+		color: white;
+		font-size: 24px;
+	}
+
+	form {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr) 265px;
+		grid-gap: 15px;
+
+		.form-group {
+			position: relative;
+			width: 180px;
+			height: 45px;
+			background: {
+				image: url('/images/site/book-widget/form-group-background.svg');
+			};
+
+			label {
+				position: absolute;
+				top: -6px;
+				left: 13px;
+				color: white;
+				text-transform: uppercase;
+				font-size: 12px;
+				line-height: 14px;
+			}
+
+			input {
+				background: none;
+				border: none;
+				height: 45px;
+				width: 100%;
+				display: block;
+				outline: none;
+				color: white;
+				font-size: 16px;
+				text-indent: 12px;
+			}
+
+			.help-block {
+				color: white;
+				font-size: 11px;
+				margin-top: 6px;
+			}
+
+			.icon {
+				position: absolute;
+				top: 12px;
+				right: 12px;
+			}
+		}
+
+		.btn {
+			background-color: white;
+			color: #333333;
+			cursor: pointer;
+
+			&:hover {
+				color: white;
+				background-color: #333333;
+			}
+		}
+	}
+
+
+}

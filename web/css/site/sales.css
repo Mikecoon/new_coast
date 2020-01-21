@@ -1,0 +1,103 @@
+#site-sales .hero {
+  padding-top: 100px;
+  background-image: url("/images/site/schedule/hero.jpg");
+  background-size: cover;
+  background-position: center; }
+  #site-sales .hero .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 500px; }
+  #site-sales .hero h1 {
+    color: white;
+    font-size: 36px;
+    line-height: 47px;
+    margin: 0; }
+#site-sales .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+  margin: 100px 0;
+  background-size: cover;
+  background-position: center; }
+  #site-sales .grid a {
+    height: 280px;
+    background: red;
+    display: block;
+    padding: 30px;
+    text-decoration: none;
+    position: relative; }
+    #site-sales .grid a .title {
+      color: white;
+      font-size: 21px;
+      line-height: 130%;
+      font-weight: bold;
+      position: relative;
+      z-index: 2; }
+    #site-sales .grid a .description {
+      color: white;
+      font-size: 16px;
+      position: relative;
+      z-index: 2;
+      margin-top: 10px;
+      line-height: 22px;
+      opacity: 0;
+      transition: 0.2s opacity; }
+    #site-sales .grid a .btn {
+      position: absolute;
+      bottom: 30px;
+      z-index: 2;
+      left: 30px;
+      right: 30px;
+      opacity: 0;
+      transition: 0.2s opacity; }
+    #site-sales .grid a::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      content: '';
+      background: linear-gradient(0deg, rgba(0, 56, 104, 0.9), rgba(0, 56, 104, 0.9));
+      opacity: 0;
+      transition: 0.2s opacity; }
+    #site-sales .grid a:hover::after, #site-sales .grid a:hover .description, #site-sales .grid a:hover .btn {
+      opacity: 1; }
+#site-sales .about {
+  margin-bottom: 100px; }
+  #site-sales .about h2 {
+    font-size: 35px;
+    line-height: 45px;
+    color: #333333;
+    margin-top: 43px;
+    margin-bottom: 15px; }
+  #site-sales .about p {
+    font-size: 16px;
+    color: #333333;
+    line-height: 24px; }
+    #site-sales .about p.hidden {
+      display: none; }
+  #site-sales .about .read-more {
+    text-decoration: none;
+    border-bottom: 1px dashed;
+    padding-bottom: 2px;
+    font-size: 16px;
+    color: #333333;
+    font-weight: bold; }
+  #site-sales .about .image {
+    position: relative; }
+    #site-sales .about .image img {
+      display: block; }
+    #site-sales .about .image::after {
+      width: 562px;
+      height: 200px;
+      border: 6px solid #F68520;
+      box-sizing: border-box;
+      content: '';
+      position: absolute;
+      bottom: -60px;
+      right: -60px;
+      z-index: -1; }
+
+/*# sourceMappingURL=sales.css.map */
