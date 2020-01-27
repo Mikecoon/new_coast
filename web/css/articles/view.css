@@ -1,0 +1,47 @@
+#articles-view .hero {
+  padding-top: 100px;
+  background-image: url("/images/site/schedule/hero.jpg");
+  background-size: cover;
+  background-position: center; }
+  #articles-view .hero .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 500px; }
+  #articles-view .hero h1 {
+    color: white;
+    font-size: 36px;
+    line-height: 47px;
+    margin: 0; }
+#articles-view .page-content {
+  padding: 100px 0 0; }
+  #articles-view .page-content p {
+    font-size: 18px;
+    color: #333333;
+    line-height: 24px; }
+    #articles-view .page-content p + p {
+      margin-top: 30px; }
+  #articles-view .page-content h2 {
+    color: #333333;
+    font-size: 24px;
+    margin-top: 40px; }
+  #articles-view .page-content ul {
+    padding-left: 0; }
+    #articles-view .page-content ul li {
+      list-style: none;
+      display: flex;
+      font-size: 18px;
+      line-height: 24px;
+      color: #333333; }
+      #articles-view .page-content ul li:before {
+        content: '';
+        width: 15px;
+        height: 1px;
+        margin-top: 9px;
+        background-color: black;
+        margin-right: 10px;
+        display: block;
+        flex-shrink: 0; }
+
+/*# sourceMappingURL=view.css.map */

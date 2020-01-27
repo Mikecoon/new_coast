@@ -17,6 +17,50 @@ $(function() {
     });
 
     $("header .menu-toggle").click(toggleMenu)
+
+    $("#contactform-phone").mask("+7 999 999-99-99")
+
+    $("#contact-form").on('beforeSubmit', event => {
+        event.preventDefault();
+
+        const data = new FormData(event.target);
+
+        const success = () => $(event.target).addClass('success');
+        const error = () =>  button.html('Ошибка. Отправить еще раз')
+
+        const spinner = $(event.target).find(".lds-ring").clone();
+        const button = $(event.target).find("button")
+        button.html(spinner)
+        spinner.addClass("show")
+
+        $.ajax({
+            url: $(event.target).attr('action'),
+            data: data,
+            type: 'POST',
+            contentType: false,
+            processData: false,
+            success: response => {
+                if (response === "1")
+                    success();
+                else
+                    error();
+            },
+            error: error,
+        });
+
+        return false;
+    })
+
+    $("#contact-form .close").click(event => {
+        $(".contact-form").removeClass('show');
+    })
+
+    $(".contact-form").click(event => {
+        if (event.target === event.currentTarget)
+            $(event.target).removeClass('show')
+    })
+
+    $(".show-contact-modal").click(event => $(".contact-form").addClass('show'))
 });
 
 function isTouchDevice() {
@@ -49,7 +93,6 @@ function toggleMenu(forceState) {
         header.removeClass("menu-open");
 
         header.find(".menu-toggle span").text('Меню')
-
 
         clearTimeout(window.toggleMenuTimer);
         window.toggleMenuTimer = setTimeout(() => {

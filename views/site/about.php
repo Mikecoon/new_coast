@@ -1,5 +1,8 @@
 <?php
-/* @var $this app\components\View */
+/**
+ * @var $this app\components\View
+ * @var $albums \app\models\Albums[]
+ */
 
 use app\assets\SliderAsset;
 use app\components\widgets\CallbackWidget\CallbackWidget;
@@ -21,7 +24,7 @@ $this->registerJsFile("/js/site/about.js", [
     <div class="hero">
         <div class="container">
             <div class="content">
-                <h1>Отель Яхт-клуб Новый Берег</h1>
+                <h1>Отель Новый Берег</h1>
 
                 <p>Если вы планируете отдохнуть на выходные или праздники, провести торжество или корпоративное мероприятие — двери нашего отеля открыты для вас и ваших гостей,
                     а наш персонал радушно примет и обслужит вас.</p>
@@ -43,7 +46,7 @@ $this->registerJsFile("/js/site/about.js", [
                     <h3>Доступность</h3>
 
                     <div class="content">
-                        Двери Отель – Яхт-клуба «Новый Берег» открыты для Гостей
+                        Двери Отеля «Новый Берег» открыты для Гостей
                         с самыми разнообразными интересами. Отель представляет собой
                         уникальную площадку для проведения банкетов, корпоративного отдыха,
                         торжеств, это идеальное место, где можно совместить бизнес с отдыхом
@@ -108,7 +111,7 @@ $this->registerJsFile("/js/site/about.js", [
             </p>
 
             <div id="services-slider">
-                <a class="image" href="/services//events">
+                <a class="image" href="/services/events">
                     <div class="title">Конференции</div>
                     <img src="/images/site/about/services/1.jpg" alt="">
                 </a>
@@ -140,25 +143,20 @@ $this->registerJsFile("/js/site/about.js", [
             <h2>Фотогалерея</h2>
 
             <div id="albums-slider">
-                <a class="image" href="#">
-                    <div class="title">Территория отеля</div>
-                    <img src="/images/site/about/services/1.jpg" alt="">
-                </a>
 
-                <a class="image" href="#">
-                    <div class="title">Пляж</div>
-                    <img src="/images/site/about/services/2.jpg" alt="">
-                </a>
+                <? foreach ($albums as $album): ?>
+                    <a class="image" href="/albums/view?id=<?=$album->id?>">
+                        <div class="title"><?=$album->name?></div>
+                        <? if (count($album->photos)):?>
+                            <img src="<?=$album->photos[0]->image?>" alt="">
+                        <? else: ?>
+                            <img src="/images/site/about/services/1.jpg" alt="">
+                        <? endif?>
+                    </a>
+                <? endforeach;?>
 
-                <a class="image" href="#">
-                    <div class="title">Яхт-клуб</div>
-                    <img src="/images/site/about/services/3.jpg" alt="">
-                </a>
 
-                <a class="image" href="#">
-                    <div class="title">Конференции</div>
-                    <img src="/images/site/about/services/3.jpg" alt="">
-                </a>
+
 
             </div>
         </div>

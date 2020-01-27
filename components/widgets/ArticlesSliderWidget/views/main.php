@@ -6,7 +6,7 @@
  * Time: 16:52
  *
  * @var $title string
- * @var $links array
+ * @var $links \app\models\Articles[]
  */
 
 
@@ -19,9 +19,9 @@
         <div class="slider">
 
             <? foreach ($links as $link): ?>
-                <a class="image" href="#">
-                    <div class="title"><?=$link['title']?></div>
-                    <img src="<?=$link['image']?>" alt="<?=$link['title']?>">
+                <a class="image" href="/articles/view?id=<?=$link->id?>">
+                    <div class="title"><?=$link->title?></div>
+                    <img src="<?=$link->image?>" alt="<?=$link->title?>">
                 </a>
             <? endforeach;?>
 

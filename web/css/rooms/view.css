@@ -56,43 +56,5 @@
       #rooms-view .room .facilities li:before {
         content: '-';
         margin-right: 10px; }
-#rooms-view .photos {
-  position: relative;
-  margin-bottom: 100px; }
-  #rooms-view .photos .photo {
-    position: relative; }
-    #rooms-view .photos .photo:after {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: white;
-      opacity: 0.5;
-      content: '';
-      transition: 0.1s opacity; }
-  #rooms-view .photos .tns-controls {
-    display: flex;
-    justify-content: flex-end;
-    z-index: 2;
-    left: 0;
-    right: 0;
-    max-width: 1400px;
-    margin: 0 auto;
-    pointer-events: none; }
-    #rooms-view .photos .tns-controls button {
-      pointer-events: all;
-      padding: 10px;
-      background: none;
-      border: none;
-      display: block; }
-      #rooms-view .photos .tns-controls button img {
-        display: block; }
-      #rooms-view .photos .tns-controls button[data-controls='prev'] {
-        transform: rotate(180deg); }
-  #rooms-view .photos .tns-slide-active + .tns-slide-active:after {
-    opacity: 0; }
-  #rooms-view .photos .tns-slide-active + .tns-slide-active + .tns-slide-active:after {
-    opacity: 0.5; }
 
 /*# sourceMappingURL=view.css.map */

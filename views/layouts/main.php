@@ -38,7 +38,7 @@ AppAsset::register($this);
             <?=file_get_contents(Yii::getAlias('@webroot/images/site/icons/menu.svg'))?> <span>Меню</span>
         </a>
 
-        <a href="#" class="map-link">
+        <a href="/map" class="map-link">
             <?=file_get_contents(Yii::getAlias('@webroot/images/site/icons/map.svg'))?> Карта территории
         </a>
     </div>
@@ -49,17 +49,17 @@ AppAsset::register($this);
 
     <div class="contacts">
         <div class="social">
-            <a href="#"><img src="/images/site/icons/fb.svg" alt=""></a>
-            <a href="#"><img src="/images/site/icons/vk.svg" alt=""></a>
-            <a href="#"><img src="/images/site/icons/insta.svg" alt=""></a>
+            <a href="<?=Yii::$app->params['fb']?>" target="_blank"><img src="/images/site/icons/fb.svg" alt=""></a>
+            <a href="<?=Yii::$app->params['vk']?>" target="_blank"><img src="/images/site/icons/vk.svg" alt=""></a>
+            <a href="<?=Yii::$app->params['insta']?>" target="_blank"><img src="/images/site/icons/insta.svg" alt=""></a>
         </div>
 
         <div class="phone">
-            <a href="#" class="number">+7 (495) 956-65-23</a>
+            <a href="tel:<?=Yii::$app->params['phone']?>" class="number"><?=Yii::$app->params['phone']?></a>
             <a href="/contacts" class="contact-info">КОНТАКТНАЯ ИНФОРМАЦИЯ</a>
         </div>
 
-        <a href="#" class="search-btn"><img src="/images/site/icons/search.svg" alt=""></a>
+        <!--<a href="#" class="search-btn"><img src="/images/site/icons/search.svg" alt=""></a>-->
 
         <div class="book-btn"><img src="/images/site/icons/order.svg" alt="">Забронировать</div>
     </div>
@@ -76,22 +76,25 @@ AppAsset::register($this);
     <div class="column">
         <a href="/">Главная страница</a>
         <a href="/about">О нас</a>
-        <a href="/contacts">Контакты</a>
-        <a href="/book">Бронирование</a>
-    </div>
-    <div class="column">
-        <a href="/pricing">Цены на услуги</a>
-        <a href="/rooms">Гостиничные услуги</a>
-        <a href="/services">Услуги и сервисы</a>
-        <a href="/sales">Акции и скидки</a>
+        <a href="/rooms">Номера</a>
+        <a href="/services">Дополнительные услуги</a>
     </div>
     <div class="column">
         <a href="/schedule">Афиша мероприятий</a>
-        <a href="/tour">3D-тур</a>
+        <a href="/pricing">Цены на услуги</a>
+        <a href="/sales">Скидки и акции</a>
+        <a href="/albums">Фотогалерея</a>
+    </div>
+    <div class="column">
+        <a href="/book">Бронирование</a>
         <a href="/map">Карта территории</a>
+        <a href="/tour">3D-тур</a>
+        <a href="/contacts">Контакты</a>
     </div>
 
 </aside>
+
+<?=$this->renderFile(Yii::getAlias("@app/views/site/_contact-form.php"))?>
 
 
 <footer>
@@ -100,7 +103,7 @@ AppAsset::register($this);
 
             <div class="column">
                 <div class="title">Центр бронирования</div>
-                <a href="tel:+74959566523" class="phone">+7 (495) 956-65-23</a>
+                <a href="tel:<?=Yii::$app->params['phone']?>" class="phone"><?=Yii::$app->params['phone']?></a>
                 <a href="mailto:reception@grk-nb.com" class="email">reception@grk-nb.com</a>
 
                 <p>Звоните круглосуточно<br/>
@@ -110,7 +113,7 @@ AppAsset::register($this);
             <div class="column">
                 <div class="title">Организация мероприятий</div>
                 <a href="tel:+79154827857" class="phone">+7 (915) 482-78-57</a>
-                <a href="mailto:sale@grk-nb.com" class="email">sale@grk-nb.com</a>
+                <a href="mailto:sale@grk-nb.com" class="email"><?=Yii::$app->params['email']?></a>
             </div>
 
             <div class="column">
@@ -126,13 +129,13 @@ AppAsset::register($this);
                 <div class="title">Социальные сети</div>
 
                 <div class="social">
-                    <a href="#">
+                    <a href="<?=Yii::$app->params['fb']?>" target="_blank">
                         <?=file_get_contents(Yii::getAlias('@webroot/images/site/icons/fb.svg'))?>
                     </a>
-                    <a href="#">
+                    <a href="<?=Yii::$app->params['vk']?>" target="_blank">
                         <?=file_get_contents(Yii::getAlias('@webroot/images/site/icons/vk.svg'))?>
                     </a>
-                    <a href="#">
+                    <a href="<?=Yii::$app->params['insta']?>" target="_blank">
                         <?=file_get_contents(Yii::getAlias('@webroot/images/site/icons/insta.svg'))?>
                     </a>
                 </div>
@@ -145,7 +148,7 @@ AppAsset::register($this);
             <div class="sub-footer-content">
                 <a href="#">Политика конфиденциальности</a>
 
-                <p>&copy; 2019 Отель яхт-клуб Новый берег. Все права защищены.</p>
+                <p>&copy; 2019 Отель Отель Новый берег. Все права защищены.</p>
 
                 <a href="http://ensolab.ru" target="_blank">Сделано в EnsoLab <img src="/images/site/ensolab.png" alt=""></a>
             </div>

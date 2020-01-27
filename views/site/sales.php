@@ -18,7 +18,7 @@ $this->registerJsFile("/js/site/sales.js", [
     <div class="hero">
         <div class="container">
             <div class="content">
-                <h1>Отель Яхт-клуб Новый Берег</h1>
+                <h1>Отель Новый Берег</h1>
             </div>
         </div>
     </div>

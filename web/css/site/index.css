@@ -177,13 +177,15 @@
       color: white;
       font-size: 46px;
       line-height: 55px;
-      margin: 0; }
+      margin: 0;
+      max-width: 450px; }
     #index-page .features-slider .slide p {
       color: white;
       font-weight: bold;
       font-size: 16px;
       line-height: 19px;
-      margin-bottom: 60px; }
+      margin-bottom: 60px;
+      max-width: 450px; }
     #index-page .features-slider .slide .btn {
       margin-bottom: 30px;
       background-color: white;

@@ -927,7 +927,7 @@ function fileInput() {
 function pjaxForm()  {
     $("form.pjax-form").each(function() {
 
-        $(this).on("afterValidate", function(event) {
+        $(this).on("beforeSubmit", function(event) {
             $.pjax.submit(event, '#pjax-container');
 
             event.preventDefault();

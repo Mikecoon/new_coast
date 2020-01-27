@@ -3,11 +3,12 @@
 
 use app\assets\SliderAsset;
 use app\components\widgets\ArticlesSliderWidget\ArticlesSliderWidget;
+
 use app\components\widgets\CallbackWidget\CallbackWidget;
 
 SliderAsset::register($this);
 
-$this->title = 'Организация свадьбы ';
+$this->title = 'Организация свадьбы';
 
 $this->registerScssFile("/css/services/common.scss");
 $this->registerScssFile("/css/services/wedding.scss");
@@ -24,7 +25,7 @@ $this->registerJsFile("/js/services/wedding.js", [
         <div class="container">
             <div class="content">
                 <h1>Организация свадьбы</h1>
-                <div class="btn">Оставить заявку</div>
+                <div class="btn show-contact-modal">Оставить заявку</div>
             </div>
         </div>
     </div>
@@ -76,8 +77,8 @@ $this->registerJsFile("/js/services/wedding.js", [
 
                 <ul>
                     <li>Номер «Люкс» в подарок при проведении свадебного
-                        банкета на территории Отеля Яхт-клуба Новый Берег</li>
-                    <li>15% скидка на размещение Ваших Гостей в Отеле при проведении свадебного банкета на территории Отеля Яхт-клуба Новый Берег</li>
+                        банкета на территории Отеля Новый Берег</li>
+                    <li>15% скидка на размещение Ваших Гостей в Отеле при проведении свадебного банкета на территории Отеля Новый Берег</li>
                     <li>При бронировании номера для новобрачных в день бракосочетания (без банкета) — 15% скидка на проживание</li>
                 </ul>
 
@@ -146,43 +147,10 @@ $this->registerJsFile("/js/services/wedding.js", [
 
     <div class="container">
 
-
         <?= ArticlesSliderWidget::widget([
-                    'title' => 'Полезная информация',
-                    'links' => [
-                        [
-                            'title' => 'Эко-отель в Подмосковье',
-                            'image' => '/images/services/index/useful-template.jpg',
-                            'href' => '#'
-                        ],
-
-                        [
-                            'title' => 'Эко-отель в Подмосковье',
-                            'image' => '/images/services/index/useful-template.jpg',
-                            'href' => '#'
-                        ],
-
-                        [
-                            'title' => 'Эко-отель в Подмосковье',
-                            'image' => '/images/services/index/useful-template.jpg',
-                            'href' => '#'
-                        ],
-
-                        [
-                            'title' => 'Эко-отель в Подмосковье',
-                            'image' => '/images/services/index/useful-template.jpg',
-                            'href' => '#'
-                        ],
-
-                        [
-                            'title' => 'Эко-отель в Подмосковье',
-                            'image' => '/images/services/index/useful-template.jpg',
-                            'href' => '#'
-                        ]
-                    ]
-                ]) ?>
-
-
+            'title' => 'Полезная информация',
+            'links' => $articles
+        ]) ?>
     </div>
 
     <?=CallbackWidget::widget()?>

@@ -26,6 +26,13 @@ $config = [
             'enableCsrfValidation' => false
         ],
 
+        'captcha' => [
+            'name'    => 'captcha',
+            'class'   => 'szaboolcs\recaptcha\InvisibleRecaptcha',
+            'siteKey' => '6LfnQtIUAAAAAE4RQMBCg-F-IeWgwy7ogCps9azX',
+            'secret'  => '6LfnQtIUAAAAANdEj5MzEra_8FQ3jKFOtHqnzL6T'
+        ],
+
         'MetrikaWidget' => [
             'class' => 'app\components\MetrikaWidget'
         ],
@@ -89,10 +96,16 @@ $config = [
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
-            // send all mails to a file by default. You have to set
-            // 'useFileTransport' to false and configure a transport
-            // for the mailer to send real emails.
             'useFileTransport' => false,
+
+            'transport' => [
+                'class' => 'Swift_SmtpTransport',
+                'host' => 'smtp.yandex.ru',
+                'username' => 'mikefinch',
+                'password' => 'ejvrvhxowcglbhlu',
+                'port' => '465',
+                'encryption' => 'SSL',
+            ],
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,

@@ -1,5 +1,8 @@
 <?php
-/* @var $this app\components\View */
+/**
+ * @var $this app\components\View
+ * @var $events \app\models\Events[]
+ */
 
 use app\components\widgets\CallbackWidget\CallbackWidget;
 
@@ -23,69 +26,18 @@ $this->registerJsFile("/js/schedule/index.js", [
     </div>
 
     <div class="container">
-
-
         <div class="grid">
+            <? foreach ($events as $event): ?>
+                <a href="/schedule/view?id=<?=$event->id?>" style="background-image: url('<?=$event->image?>')">
 
-            <a href="/schedule/view?id=1" style="background-image: url('/images/site/schedule/template.jpg')">
+                    <div class="title"><?=$event->title?></div>
+                    <div class="description"><?=$event->description?></div>
 
-                <div class="title">Ваш праздник в Новом Береге</div>
-                <div class="description">Конференц зал в подарок, скидки на аренду банкетных залов до 50% и многое другое</div>
+                    <div class="btn">Подробнее</div>
 
-                <div class="btn">Подробнее</div>
-
-            </a>
-
-            <a href="#" style="background-image: url('/images/site/schedule/template.jpg')">
-
-                <div class="title">Ваш праздник в Новом Береге</div>
-                <div class="description">Конференц зал в подарок, скидки на аренду банкетных залов до 50% и многое другое</div>
-
-                <div class="btn">Подробнее</div>
-
-            </a>
-
-            <a href="#" style="background-image: url('/images/site/schedule/template.jpg')">
-
-                <div class="title">Ваш праздник в Новом Береге</div>
-                <div class="description">Конференц зал в подарок, скидки на аренду банкетных залов до 50% и многое другое</div>
-
-                <div class="btn">Подробнее</div>
-
-            </a>
-
-            <a href="#" style="background-image: url('/images/site/schedule/template.jpg')">
-
-                <div class="title">Ваш праздник в Новом Береге</div>
-                <div class="description">Конференц зал в подарок, скидки на аренду банкетных залов до 50% и многое другое</div>
-
-                <div class="btn">Подробнее</div>
-
-            </a>
-
-            <a href="#" style="background-image: url('/images/site/schedule/template.jpg')">
-
-                <div class="title">Ваш праздник в Новом Береге</div>
-                <div class="description">Конференц зал в подарок, скидки на аренду банкетных залов до 50% и многое другое</div>
-
-                <div class="btn">Подробнее</div>
-
-            </a>
-
-            <a href="#" style="background-image: url('/images/site/schedule/template.jpg')">
-
-                <div class="title">Ваш праздник в Новом Береге</div>
-                <div class="description">Конференц зал в подарок, скидки на аренду банкетных залов до 50% и многое другое</div>
-
-                <div class="btn">Подробнее</div>
-
-            </a>
-
-
+                </a>
+            <? endforeach;?>
         </div>
-
     </div>
-
-
     <?=CallbackWidget::widget()?>
 </div>

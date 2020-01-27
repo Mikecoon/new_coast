@@ -1,5 +1,25 @@
 #services-page .hero {
   background-image: url("/images/services/events/hero.jpg"); }
+#services-page .types {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+  margin-top: 100px; }
+  #services-page .types .type {
+    height: 50px;
+    text-align: center;
+    border: 1px solid #A7ABBE;
+    box-sizing: border-box;
+    line-height: 50px;
+    font-size: 18px;
+    color: #A7ABBE;
+    transition: 0.2s background-color, 0.2s color;
+    cursor: pointer; }
+    #services-page .types .type:hover {
+      border-color: #003868; }
+    #services-page .types .type.active {
+      background: #003868;
+      color: white; }
 #services-page .content-row {
   position: relative; }
   #services-page .content-row .buttons {
@@ -20,6 +40,8 @@
   #services-page .content-row .remark {
     color: #A7ABBE;
     font-size: 14px; }
+  #services-page .content-row.hidden {
+    display: none; }
 #services-page .modal {
   position: fixed;
   z-index: 25;

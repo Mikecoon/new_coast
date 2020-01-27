@@ -4,7 +4,6 @@
 use app\assets\SliderAsset;
 use app\components\widgets\BookWidget\BookWidget;
 use app\components\widgets\CallbackWidget\CallbackWidget;
-use app\components\widgets\ArticlesSliderWidget\ArticlesSliderWidget;
 
 SliderAsset::register($this);
 
@@ -85,7 +84,7 @@ $this->registerJsFile("/js/services/index.js", [
                             мы приглашаем вас на прогулку на катере!
                             <br> <br>
                             Ищите дом отдыха для двоих? Не нужно далеко ехать, ведь в ближнем Подмосковье в нашем
-                            Отеле-Яхт-клубе вы сможете провести время наедине, расслабиться в спа-комплексе,
+                            Отеле вы сможете провести время наедине, расслабиться в спа-комплексе,
                             отведать вкусных угощений в ресторане у воды или, если захочется чего-то более активного,
                             найти занятие по душе вам обоим из спектра развлечений, доступных здесь зимой и летом.
                             <br> <br>
@@ -105,41 +104,40 @@ $this->registerJsFile("/js/services/index.js", [
 
         </div>
 
-        <?= ArticlesSliderWidget::widget([
-                'title' => 'Полезная информация',
-                'links' => [
-                    [
-                        'title' => 'Эко-отель в Подмосковье',
-                        'image' => '/images/services/index/useful-template.jpg',
-                        'href' => '#'
-                    ],
+        <div class="useful-info">
 
-                    [
-                        'title' => 'Эко-отель в Подмосковье',
-                        'image' => '/images/services/index/useful-template.jpg',
-                        'href' => '#'
-                    ],
+            <div class="container">
+                <h2>Полезная информация</h2>
+                <div id="useful-slider">
+                    <a class="image" href="#">
+                        <div class="title">Эко-отель в Подмосковье</div>
+                        <img src="/images/services/index/useful-template.jpg" alt="">
+                    </a>
 
-                    [
-                        'title' => 'Эко-отель в Подмосковье',
-                        'image' => '/images/services/index/useful-template.jpg',
-                        'href' => '#'
-                    ],
+                    <a class="image" href="#">
+                        <div class="title">Эко-отель в Подмосковье</div>
+                        <img src="/images/services/index/useful-template.jpg" alt="">
+                    </a>
 
-                    [
-                        'title' => 'Эко-отель в Подмосковье',
-                        'image' => '/images/services/index/useful-template.jpg',
-                        'href' => '#'
-                    ],
+                    <a class="image" href="#">
+                        <div class="title">Эко-отель в Подмосковье</div>
+                        <img src="/images/services/index/useful-template.jpg" alt="">
+                    </a>
 
-                    [
-                        'title' => 'Эко-отель в Подмосковье',
-                        'image' => '/images/services/index/useful-template.jpg',
-                        'href' => '#'
-                    ]
-                ]
-            ]) ?>
+                    <a class="image" href="#">
+                        <div class="title">Эко-отель в Подмосковье</div>
+                        <img src="/images/services/index/useful-template.jpg" alt="">
+                    </a>
 
+                    <a class="image" href="#">
+                        <div class="title">Эко-отель в Подмосковье</div>
+                        <img src="/images/services/index/useful-template.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
     </div>
 
 

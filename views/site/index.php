@@ -1,5 +1,8 @@
 <?php
-/* @var $this app\components\View */
+/**
+ * @var $this app\components\View
+ * @var $banners \app\models\Banners[]
+ */
 
 use app\assets\DatepickerAsset;
 use app\assets\SliderAsset;
@@ -26,7 +29,7 @@ $this->registerJsFile("/js/site/index.js", [
         <div class="container">
 
             <div class="wrapper">
-                <h1>Отель Яхт-клуб «Новый берег»</h1>
+                <h1>Отель «Новый берег»</h1>
 
                 <p>
                     Мы рады предложить Вам широкий спектр профессиональных услуг по организации
@@ -70,10 +73,10 @@ $this->registerJsFile("/js/site/index.js", [
 
             <div class="row">
                 <div class="col-md-6">
-                    <h1>Об отеле Яхт-клубе</h1>
+                    <h1>Об отеле Новый Берег</h1>
 
                     <p>
-                        Отель Яхт-клуб «Новый Берег» расположен на живописном берегу Пироговского водохранилища,
+                        Отель «Новый Берег» расположен на живописном берегу Пироговского водохранилища,
                         в 9 километрах от Москвы, располагает обустроенной автомобильной парковкой,
                         гостевым причалом для яхт и катеров, и мариной на 100 мест. К вашим услугам:
                     </p>
@@ -110,23 +113,18 @@ $this->registerJsFile("/js/site/index.js", [
     <div class="features-slider">
 
         <div id="features-slider">
-            <div class="slide" style="background-image: url('/images/site/index/features/feature-1.jpg')">
 
-                <div class="container">
-                    <h2>Праздничный<br/>зал «ИZБА»</h2>
+            <? foreach ($banners as $banner): ?>
+                <div class="slide" style="background-image: url('<?=$banner->photo?>')">
+                    <div class="container">
+                        <h2><?=$banner->title?></h2>
 
-                    <p>Забронируйте стол в ресторане «ИZБА»<br/>
-                        заранее и получите скидку 20% на весь заказ!</p>
+                        <p><?=$banner->description?></p>
 
-                    <a href="#" class="btn">Подробнее</a>
-
+                        <a href="<?=$banner->link?>" class="btn">Подробнее</a>
+                    </div>
                 </div>
-
-            </div>
-
-            <div class="slide" style="background-image: url('/images/site/index/features/feature-1.jpg')">
-
-            </div>
+            <? endforeach; ?>
         </div>
 
     </div>
@@ -141,7 +139,7 @@ $this->registerJsFile("/js/site/index.js", [
                     <h3>Доступность</h3>
 
                     <div class="content">
-                        Двери Отель – Яхт-клуба «Новый Берег» открыты для Гостей
+                        Двери Отеля «Новый Берег» открыты для Гостей
                         с самыми разнообразными интересами. Отель представляет собой
                         уникальную площадку для проведения банкетов, корпоративного отдыха,
                         торжеств, это идеальное место, где можно совместить бизнес с отдыхом

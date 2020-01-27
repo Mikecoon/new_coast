@@ -13,6 +13,9 @@ use app\assets\MakeAsset;
 use yii\widgets\ActiveFormAsset;
 use yii\grid\GridViewAsset;
 use app\modules\admin\assets\AdminAsset;
+use dosamigos\ckeditor\CKEditorAsset;
+use dosamigos\ckeditor\CKEditorWidgetAsset;
+
 
 
 AppAsset::register($this);
@@ -20,6 +23,8 @@ MakeAsset::register($this);
 AdminAsset::register($this);
 GridViewAsset::register($this);
 ActiveFormAsset::register($this);
+CKEditorAsset::register($this);
+CKEditorWidgetAsset::register($this);
 
 ?>
 <?php $this->beginPage()

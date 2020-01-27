@@ -75,6 +75,10 @@ class FileBehavior extends Behavior {
                             break;
                     }
                 }
+            } else {
+                $this->owner->setAttribute($name, $this->owner->oldAttributes[$name]);
+
+
             }
         }
     }

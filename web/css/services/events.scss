@@ -3,10 +3,37 @@
 		 background-image: url('/images/services/events/hero.jpg');
 	 }
 
+	.types {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 15px;
+		margin-top: 100px;
+
+		.type {
+			height: 50px;
+			text-align: center;
+			border: 1px solid #A7ABBE;
+			box-sizing: border-box;
+			line-height: 50px;
+			font-size: 18px;
+			color: #A7ABBE;
+			transition: 0.2s background-color, 0.2s color;
+			cursor: pointer;
+
+			&:hover {
+				border-color: #003868;
+			}
+
+			&.active {
+				background: #003868;
+				color: white;
+			}
+		}
+	}
+
 	.content-row {
 
 		position: relative;
-
 
 		.buttons {
 			display: flex;
@@ -36,6 +63,10 @@
 		.remark {
 			color: #A7ABBE;
 			font-size: 14px;
+		}
+
+		&.hidden {
+			display: none;
 		}
 	}
 

@@ -2,6 +2,8 @@
 
 namespace app\controllers;
 
+use app\models\Articles;
+use app\models\Places;
 use Yii;
 use app\components\AccessControl;
 use yii\web\Controller;
@@ -17,23 +19,69 @@ class ServicesController extends Controller {
     }
 
     public function actionView() {
-        return $this->render('view');
+
+        $articles = Articles::find()
+            ->where(['visible' => 1])
+            ->orderBy('sort desc')
+            ->all();
+
+        return $this->render('view', [
+            'articles' => $articles,
+        ]);
     }
 
     public function actionWedding() {
-        return $this->render('wedding');
+
+        $articles = Articles::find()
+            ->where(['visible' => 1])
+            ->orderBy('sort desc')
+            ->all();
+
+        return $this->render('wedding', [
+            'articles' => $articles,
+        ]);
     }
 
     public function actionBanquet() {
-        return $this->render('banquet');
+
+        $articles = Articles::find()
+            ->where(['visible' => 1])
+            ->orderBy('sort desc')
+            ->all();
+
+        return $this->render('banquet', [
+            'articles' => $articles,
+        ]);
     }
 
     public function actionFamily() {
-        return $this->render('family');
+        $articles = Articles::find()
+            ->where(['visible' => 1])
+            ->orderBy('sort desc')
+            ->all();
+
+        return $this->render('family', [
+            'articles' => $articles,
+        ]);
     }
 
     public function actionEvents() {
-        return $this->render('events');
+
+        $articles = Articles::find()
+            ->where(['visible' => 1])
+            ->orderBy('sort desc')
+            ->all();
+
+
+        $places = Places::find()
+            ->where(['is_events' => 1, 'visible' => 1])
+            ->orderBy('sort desc')
+            ->all();
+
+        return $this->render('events', [
+            'articles' => $articles,
+            'places' => $places,
+        ]);
     }
 
 

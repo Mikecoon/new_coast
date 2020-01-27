@@ -1,0 +1,88 @@
+#entertainment-page {
+  max-width: 100vw;
+  overflow-x: hidden;
+
+  .hero {
+    padding-top: 100px;
+    background: {
+      size: cover;
+      position: center;
+    };
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 500px;
+    }
+
+    h1 {
+      color: white;
+      font-size: 36px;
+      line-height: 47px;
+      margin: 0;
+    }
+
+    .btn {
+      background-color: white;
+      margin-top: 15px;
+      max-width: 274px;
+      width: 100%;
+      color: #333333;
+      cursor: pointer;
+    }
+  }
+
+  .content {
+    padding: 100px 0;
+
+    p {
+      font-size: 18px;
+      color: #333333;
+      line-height: 24px;
+
+       + p {
+         margin-top: 30px;
+       }
+    }
+
+    h2 {
+      color: #333333;
+      font-size: 24px;
+      margin-top: 40px;
+    }
+
+    ul {
+      padding-left: 0;
+
+      li {
+        list-style: none;
+        display: flex;
+        font-size: 18px;
+        line-height: 24px;
+        color: #333333;
+
+        &:before {
+          content: '';
+          width: 15px;
+          height: 1px;
+          margin-top: 9px;
+          background-color: black;
+          margin-right: 10px;
+          display: block;
+          flex-shrink: 0;
+        }
+      }
+    }
+
+    .hint {
+      color: #A7ABBE;
+      margin-top: 0;
+    }
+  }
+
+  .photos-slider-widget {
+
+  }
+}

@@ -2,6 +2,8 @@
 
 namespace app\controllers;
 
+use app\models\Albums;
+use app\models\Banners;
 use Yii;
 use app\components\AccessControl;
 use yii\web\Controller;
@@ -9,6 +11,8 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\Settings;
+use szaboolcs\recaptcha\InvisibleRecaptchaValidator;
+use yii\web\ForbiddenHttpException;
 
 class SiteController extends Controller {
 
@@ -47,7 +51,15 @@ class SiteController extends Controller {
     }
 
     public function actionAbout() {
-        return $this->render('about');
+
+        $albums = Albums::find()
+            ->where(['visible' => 1])
+            ->orderBy('sort desc')
+            ->all();
+
+        return $this->render('about', [
+            'albums' => $albums
+        ]);
     }
 
     public function actionContacts() {
@@ -67,11 +79,19 @@ class SiteController extends Controller {
     }
 
     public function actionSales() {
-        return $this->render('sales');
+        return Yii::$app->runAction('sales/index', []);
     }
 
     public function actionIndex() {
-        return $this->render('index');
+
+        $banners = Banners::find()
+            ->where(['visible' => 1])
+            ->orderBy('sort desc')
+            ->all();
+
+        return $this->render('index', [
+            'banners' => $banners
+        ]);
     }
 
     public function actionAdmin() {
@@ -82,5 +102,29 @@ class SiteController extends Controller {
         return Yii::$app->runAction('rooms/index', []);
     }
 
+    public function actionAlbums() {
+        return Yii::$app->runAction('albums/index', []);
+    }
+
+    public function actionTour() {
+        return $this->render('tour');
+    }
+
+    public function actionMap() {
+        return $this->render('map');
+    }
+
+    public function actionContactForm() {
+        $model = new ContactForm();
+
+        $model->load(Yii::$app->request->post());
+
+        if ($model->validate() && InvisibleRecaptchaValidator::validate(Yii::$app->request->post(InvisibleRecaptchaValidator::POST_ELEMENT))) {
+            echo $model->contact(Yii::$app->params['contactEmail']);
+        } else {
+            throw new ForbiddenHttpException('Captcha error');
+        }
+
+    }
 
 }

@@ -35,6 +35,43 @@ class Admin extends Module {
             "title" => "Настройки",
             "icon" => "fa fa-group",
         ],
+
+        "events" => [
+            "url" => ["/admin/events/"],
+            "title" => "Мероприятия",
+            "icon" => "fa fa-group",
+        ],
+
+        "sales" => [
+            "url" => ["/admin/sales/"],
+            "title" => "Акции",
+            "icon" => "fa fa-group",
+        ],
+
+        "articles" => [
+            "url" => ["/admin/articles/"],
+            "title" => "Полезная информация",
+            "icon" => "fa fa-group",
+        ],
+
+        "places" => [
+            "url" => ["/admin/places/"],
+            "title" => "Места",
+            "icon" => "fa fa-group",
+        ],
+
+        "albums" => [
+            "url" => ["/admin/albums/"],
+            "title" => "Фотоальбомы",
+            "icon" => "fa fa-group",
+        ],
+
+        "banners" => [
+            "url" => ["/admin/banners/"],
+            "title" => "Баннеры",
+            "icon" => "fa fa-group",
+        ],
+
     ];
 
     /**
@@ -58,6 +95,12 @@ class Admin extends Module {
         ],*/
 
         "default",
-        "users"
+        "users",
+        "events",
+        "sales",
+        "articles",
+        "places",
+        "albums",
+        "banners",
     ];
 }

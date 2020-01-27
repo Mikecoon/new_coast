@@ -10,3 +10,15 @@ table {
 *:not(i):not(.fa) {
     font-family: "Exo 2", sans-serif !important;
 }
+
+.photos-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 550px);
+    grid-gap: 30px;
+
+
+    img {
+        object-fit: cover;
+        width: 100%;
+    }
+}

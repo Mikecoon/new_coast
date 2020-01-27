@@ -23,7 +23,10 @@
         "yiisoft/yii2": ">=2.0.5",
         "yiisoft/yii2-bootstrap": "*",
         "yiisoft/yii2-swiftmailer": "*",
-        "fxp/composer-asset-plugin": "^1.2.0"
+        "fxp/composer-asset-plugin": "^1.2.0",
+        "szaboolcs/yii2-invisible-recaptcha": "dev-master",
+        "2amigos/yii2-ckeditor-widget": "^2.2",
+        "sunhater/kcfinder": "dev-master"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",
@@ -44,6 +47,9 @@
             "php yii migrate --interactive=0 #"
         ]
     },
+
+    "minimum-stability": "stable",
+    "prefer-stable": true,
 
     "autoload": {
         "psr-4": {

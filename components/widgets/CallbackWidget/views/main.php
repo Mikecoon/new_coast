@@ -15,7 +15,7 @@
 
         <p>Звоните нам в любое время суток +7 (495) 956-65-23</p>
 
-        <a href="#" class="btn">Заказать звонок</a>
+        <a href="#" class="btn show-callback-form-modal">Заказать звонок</a>
     </div>
 </div>
 

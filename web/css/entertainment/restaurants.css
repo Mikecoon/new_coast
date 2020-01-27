@@ -1,0 +1,94 @@
+#entertainment-page .hero {
+  background-image: url("/images/entertainment/restaurants/hero.jpg"); }
+#entertainment-page .content-row {
+  display: flex;
+  margin: 100px -15px 150px;
+  align-items: stretch; }
+  #entertainment-page .content-row .text, #entertainment-page .content-row .image {
+    margin: 0 15px;
+    width: 100%; }
+  #entertainment-page .content-row .text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column; }
+    #entertainment-page .content-row .text h2 {
+      font-size: 35px;
+      line-height: 47px;
+      color: #333333;
+      margin: 0; }
+    #entertainment-page .content-row .text ul {
+      padding-left: 0; }
+      #entertainment-page .content-row .text ul li {
+        list-style: none;
+        display: flex;
+        font-size: 16px;
+        line-height: 24px;
+        color: #333333; }
+        #entertainment-page .content-row .text ul li:before {
+          content: '';
+          width: 15px;
+          height: 1px;
+          margin-top: 9px;
+          background-color: black;
+          margin-right: 10px;
+          display: block;
+          flex-shrink: 0; }
+  #entertainment-page .content-row .image {
+    position: relative; }
+    #entertainment-page .content-row .image > img {
+      width: 100%;
+      display: block; }
+    #entertainment-page .content-row .image .slider-wrapper {
+      position: relative;
+      width: 200%; }
+    #entertainment-page .content-row .image .slide img {
+      width: 100%; }
+    #entertainment-page .content-row .image .tns-controls {
+      width: 50%;
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 10px; }
+      #entertainment-page .content-row .image .tns-controls button {
+        padding: 10px;
+        background: none;
+        border: none;
+        display: block; }
+        #entertainment-page .content-row .image .tns-controls button img {
+          display: block; }
+        #entertainment-page .content-row .image .tns-controls button[data-controls='prev'] {
+          transform: rotate(180deg); }
+    #entertainment-page .content-row .image::after {
+      width: 562px;
+      height: 350px;
+      background: #003868;
+      position: absolute;
+      bottom: -60px;
+      right: -150px;
+      content: '';
+      z-index: -1; }
+  #entertainment-page .content-row .buttons {
+    display: flex;
+    margin-top: 30px; }
+    #entertainment-page .content-row .buttons .solid {
+      background: #003868;
+      margin-right: 15px;
+      border: 1px solid #003868; }
+      #entertainment-page .content-row .buttons .solid:hover {
+        background: white; }
+    #entertainment-page .content-row .buttons .border {
+      border: 1px solid #003868;
+      color: #003868; }
+      #entertainment-page .content-row .buttons .border:hover {
+        background: #003868;
+        color: white; }
+  #entertainment-page .content-row.reverse {
+    flex-direction: row-reverse; }
+    #entertainment-page .content-row.reverse .text {
+      padding-left: 80px; }
+    #entertainment-page .content-row.reverse .image::after {
+      right: auto;
+      left: -150px; }
+    #entertainment-page .content-row.reverse .slider-wrapper {
+      left: -100%; }
+
+/*# sourceMappingURL=restaurants.css.map */

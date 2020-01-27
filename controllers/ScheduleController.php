@@ -2,22 +2,32 @@
 
 namespace app\controllers;
 
-use Yii;
-use app\components\AccessControl;
+use app\models\Events;
 use yii\web\Controller;
-use yii\filters\VerbFilter;
-use app\models\LoginForm;
-use app\models\ContactForm;
-use app\models\Settings;
 
 class ScheduleController extends Controller {
 
     public function actionIndex() {
-        return $this->render('index');
+
+        $events = Events::find()
+            ->where(['visible' => 1])
+            ->orderBy('sort desc')
+            ->all();
+
+        return $this->render('index', [
+            'events' => $events
+        ]);
     }
 
-    public function actionView() {
-        return $this->render('view');
+    public function actionView($id) {
+
+        $model = Events::find()
+            ->where(['id' => $id])
+            ->one();
+
+        return $this->render('view', [
+            'model' => $model
+        ]);
     }
 
 }

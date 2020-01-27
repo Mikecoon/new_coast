@@ -24,7 +24,7 @@ $this->registerJsFile("/js/services/wedding.js", [
         <div class="container">
             <div class="content">
                 <h1>Банкетные залы</h1>
-                <div class="btn">Оставить заявку</div>
+                <div class="btn show-contact-modal">Оставить заявку</div>
             </div>
         </div>
     </div>
@@ -45,7 +45,7 @@ $this->registerJsFile("/js/services/wedding.js", [
                 </ul>
 
                 <div class="buttons">
-                    <a href="#" class="btn solid">Оставить заявку</a>
+                    <a href="#" class="btn solid show-contact-modal">Оставить заявку</a>
                     <a href="#" class="btn border">Банкетное меню</a>
                 </div>
 
@@ -80,7 +80,7 @@ $this->registerJsFile("/js/services/wedding.js", [
                 </ul>
 
                 <div class="buttons">
-                    <a href="#" class="btn solid">Оставить заявку</a>
+                    <a href="#" class="btn solid show-contact-modal">Оставить заявку</a>
                     <a href="#" class="btn border">Банкетное меню</a>
                 </div>
 
@@ -112,7 +112,7 @@ $this->registerJsFile("/js/services/wedding.js", [
                 </ul>
 
                 <div class="buttons">
-                    <a href="#" class="btn solid">Оставить заявку</a>
+                    <a href="#" class="btn solid show-contact-modal">Оставить заявку</a>
                     <a href="#" class="btn border">Банкетное меню</a>
                 </div>
 
@@ -144,7 +144,7 @@ $this->registerJsFile("/js/services/wedding.js", [
                 </ul>
 
                 <div class="buttons">
-                    <a href="#" class="btn solid">Оставить заявку</a>
+                    <a href="#" class="btn solid show-contact-modal">Оставить заявку</a>
                     <a href="#" class="btn border">Банкетное меню</a>
                 </div>
 
@@ -176,7 +176,7 @@ $this->registerJsFile("/js/services/wedding.js", [
                 </ul>
 
                 <div class="buttons">
-                    <a href="#" class="btn solid">Оставить заявку</a>
+                    <a href="#" class="btn solid show-contact-modal">Оставить заявку</a>
                     <a href="#" class="btn border">Банкетное меню</a>
                 </div>
 
@@ -208,7 +208,7 @@ $this->registerJsFile("/js/services/wedding.js", [
                 </ul>
 
                 <div class="buttons">
-                    <a href="#" class="btn solid">Оставить заявку</a>
+                    <a href="#" class="btn solid show-contact-modal">Оставить заявку</a>
                     <a href="#" class="btn border">Банкетное меню</a>
                 </div>
 
@@ -262,37 +262,7 @@ $this->registerJsFile("/js/services/wedding.js", [
 
         <?= ArticlesSliderWidget::widget([
             'title' => 'Полезная информация',
-            'links' => [
-                [
-                    'title' => 'Эко-отель в Подмосковье',
-                    'image' => '/images/services/index/useful-template.jpg',
-                    'href' => '#'
-                ],
-
-                [
-                    'title' => 'Эко-отель в Подмосковье',
-                    'image' => '/images/services/index/useful-template.jpg',
-                    'href' => '#'
-                ],
-
-                [
-                    'title' => 'Эко-отель в Подмосковье',
-                    'image' => '/images/services/index/useful-template.jpg',
-                    'href' => '#'
-                ],
-
-                [
-                    'title' => 'Эко-отель в Подмосковье',
-                    'image' => '/images/services/index/useful-template.jpg',
-                    'href' => '#'
-                ],
-
-                [
-                    'title' => 'Эко-отель в Подмосковье',
-                    'image' => '/images/services/index/useful-template.jpg',
-                    'href' => '#'
-                ]
-            ]
+            'links' => $articles
         ]) ?>
     </div>
 

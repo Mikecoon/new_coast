@@ -1,6 +1,6 @@
 <?php
 
-use app\assets\DatepickerAsset;
+
 use app\assets\SliderAsset;
 use app\components\widgets\BookWidget\BookWidget;
 use app\components\widgets\CallbackWidget\CallbackWidget;
@@ -24,7 +24,7 @@ $this->registerJsFile("/js/rooms/index.js", [
 
         <div class="container">
             <div class="content">
-                <h1>Номера в отеле Яхт-клубе «Новый Берег»</h1>
+                <h1>Номера в отеле «Новый Берег»</h1>
                 <p>Отель «Новый Берег» располагает номерным фондом, отличающимся как комфортом,
                     так и красотой, и уютом. Мы предлагаем Вам несколько вариантов номеров, подходящих
                     под любую ценовую категорию и любое количество постояльцев.</p>

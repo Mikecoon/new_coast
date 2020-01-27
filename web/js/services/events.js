@@ -56,4 +56,20 @@ $(function() {
 
     }
 
+    $(".types").on("click", ".type", event => {
+
+        const type = $(event.delegateTarget)
+            .find(".type")
+            .removeClass("active")
+            .filter(event.currentTarget)
+            .addClass("active")
+            .data("key")
+
+
+        $(".content-row").each((i, element) => {
+
+            $(element).toggleClass('hidden', $(element).data("type") !== type)
+        })
+
+    })
 });

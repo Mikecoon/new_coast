@@ -1,12 +1,11 @@
 <?php
 
 use app\assets\DatepickerAsset;
-use app\assets\SliderAsset;
 use app\components\widgets\BookWidget\BookWidget;
 use app\components\widgets\CallbackWidget\CallbackWidget;
+use app\components\widgets\PhotosSliderWidget\PhotosSliderWidget;
 
 DatepickerAsset::register($this);
-SliderAsset::register($this);
 
 $this->title = 'Номер';
 
@@ -15,6 +14,13 @@ $this->registerScssFile("/css/rooms/view.scss");
 $this->registerJsFile("/js/rooms/view.js", [
     'depends' => \yii\web\JqueryAsset::class
 ]);
+
+$photos = [
+    '/images/rooms/view/photo-1.jpg',
+    '/images/rooms/view/photo-2.jpg',
+    '/images/rooms/view/photo-1.jpg',
+    '/images/rooms/view/photo-2.jpg',
+];
 
 ?>
 
@@ -30,7 +36,7 @@ $this->registerJsFile("/js/rooms/view.js", [
             </div>
         </div>
     </div>
-    <?=BookWidget::widget()?>
+    <?= BookWidget::widget() ?>
 
     <div class="room">
         <div class="container">
@@ -53,7 +59,9 @@ $this->registerJsFile("/js/rooms/view.js", [
                     <h2>Описание</h2>
 
                     <p>
-                        Номер «Стандарт» с двумя кроватями – это идеальный выбор для двухместного размещения. Оснащение включает в себя все необходимые для наиболее комфортабельного отдыха. Интерьер выполнен в приятных мягких цветах
+                        Номер «Стандарт» с двумя кроватями – это идеальный выбор для двухместного размещения. Оснащение
+                        включает в себя все необходимые для наиболее комфортабельного отдыха. Интерьер выполнен в
+                        приятных мягких цветах
                         и располагает, как для спокойного отдыха, так и для результативной работы.
                     </p>
 
@@ -81,18 +89,8 @@ $this->registerJsFile("/js/rooms/view.js", [
         </div>
     </div>
 
-    <div class="photos">
+    <?= PhotosSliderWidget::widget(['photos' => $photos]) ?>
 
-        <div id="photos-slider">
-            <div class="photo"><img src="/images/rooms/view/photo-1.jpg" alt=""></div>
-            <div class="photo"><img src="/images/rooms/view/photo-2.jpg" alt=""></div>
-            <div class="photo"><img src="/images/rooms/view/photo-1.jpg" alt=""></div>
-            <div class="photo"><img src="/images/rooms/view/photo-2.jpg" alt=""></div>
-        </div>
-
-    </div>
-
-
-    <?=CallbackWidget::widget()?>
+    <?= CallbackWidget::widget() ?>
 
 </div>

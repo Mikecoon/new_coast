@@ -1,9 +1,12 @@
 <?php
-/* @var $this app\components\View */
+/**
+ * @var $this app\components\View
+ * @var $model \app\models\Events
+ */
 
 use app\components\widgets\CallbackWidget\CallbackWidget;
 
-$this->title = 'Мероприятие';
+$this->title = $model->title;
 
 $this->registerScssFile("/css/schedule/view.scss");
 
@@ -14,17 +17,18 @@ $this->registerJsFile("/js/schedule/view.js", [
 ?>
 
 <div id="schedule-view">
-    <div class="hero">
+    <div class="hero" style="background-image: url('<?=$model->banner?>')">
         <div class="container">
             <div class="content">
-                <h1>Ваш праздник в Новом Береге</h1>
+                <h1><?=$model->title?></h1>
             </div>
         </div>
     </div>
 
-
     <div class="container">
-        <p></p>
+        <div class="page-content">
+            <?=$model->content?>
+        </div>
     </div>
 
     <?=CallbackWidget::widget()?>
