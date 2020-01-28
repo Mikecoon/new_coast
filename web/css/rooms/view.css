@@ -38,6 +38,8 @@
       font-size: 14px;
       line-height: 19px;
       color: #333333; }
+    #rooms-view .room .param sup {
+      top: -0.5rem; }
   #rooms-view .room h2 {
     margin-top: 0; }
   #rooms-view .room p {

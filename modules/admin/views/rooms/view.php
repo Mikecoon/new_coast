@@ -5,28 +5,28 @@ use yii\helpers\Url;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Places */
+/* @var $model app\models\Rooms */
 
 $this->title = $model->name(["ЕД", "ИМ"]);
 ?>
-<div class="places-view">
+<div class="rooms-view">
 
-    <h2><?= Html::encode($this->title) ?> #<strong><?= $model->id ?></strong></h2>
+    <h2><?= Html::encode($this->title) ?> #<strong><?=$model->id?></strong></h2>
 
     <div class="panel">
         <div class="panel-body">
             <div class="pull-right t-right">
-                Дата создания: <strong><?= $model->getCreateDate("d MMMM y H:mm"); ?></strong> <br>
-                <a href="<?= Url::toRoute(['log', 'id' => $model->id]) ?>">История изменений</a>
+                Дата создания: <strong><?=  $model->getCreateDate("d MMMM y H:mm");?></strong> <br>
+                <a href="<?= Url::toRoute(['log', 'id' => $model->id])?>">История изменений</a>
             </div>
 
             <?= Html::a('Редактировать', ['update', 'id' => $model->id], ['class' => 'btn btn-warning']) ?>
             <?= Html::a('Удалить', ['delete', 'id' => $model->id], [
                 'class' => 'btn btn-danger',
                 'data' => [
-                    'confirm' => 'Вы действительно хотите удалить этот элемент',
-                    'method' => 'post',
-                    'pjax' => '0',
+                'confirm' => 'Вы действительно хотите удалить этот элемент',
+                'method' => 'post',
+                'pjax' => '0',
                 ],
             ]) ?>
 
@@ -36,40 +36,22 @@ $this->title = $model->name(["ЕД", "ИМ"]);
                 'attributes' => [
                     'id',
                     'name',
-                    'content:html',
+                    'capacity',
+                    'square',
+                    'booking_id',
+                    'description:ntext',
+                    'facilities:ntext',
+                    'start_price',
                     [
-                        'attribute' => 'is_banquet',
-                        'value' => $model->is_banquet ? "Да" : "Нет"
-                    ],
-                    [
-                        'attribute' => 'is_restaurant',
-                        'value' => $model->is_restaurant ? "Да" : "Нет"
-                    ],
-                    [
-                        'attribute' => 'is_events',
-                        'value' => $model->is_events ? "Да" : "Нет"
-                    ],
-
-                    [
-                        'attribute' => 'type',
-                        'value' => \app\models\Places::$types[$model->type]
-                    ],
-
-                    [
-                        'attribute' => 'capacity',
+                        'attribute' => 'banner',
                         'format' => 'raw',
-                        'value' => Html::tag('div', implode("", array_map(function ($value, $key) {
-                            return Html::tag('div', Html::img("/images/services/events/scheme/".($key+1).".svg")
-                                . Html::tag('span', $value, ['class' => 'm-l-30'])
-                                , ['class' => 'col-md-2 text-center']);
-                        }, json_decode($model->capacity),array_keys(json_decode($model->capacity)))), ['class' => 'row'])
+                        'value' => "<img src='{$model->banner}' style='max-width: 100%'>"
                     ],
                     [
                         'attribute' => 'visible',
                         'value' => $model->visible ? "Да" : "Нет"
                     ],
                     'sort',
-                    'menu_link',
                 ],
             ]) ?>
         </div>
@@ -101,7 +83,6 @@ $this->title = $model->name(["ЕД", "ИМ"]);
     </div>
 </div>
 
-
 <script>
 
     $(function(){
@@ -114,7 +95,7 @@ $this->title = $model->name(["ЕД", "ИМ"]);
                 });
 
                 $.ajax({
-                    url: "/admin/places-photos/order",
+                    url: "/admin/rooms-photos/order",
                     data: {ids: JSON.stringify(photos.toArray())}
                 })
             }
@@ -149,11 +130,11 @@ $this->title = $model->name(["ЕД", "ИМ"]);
                     if (mimes.indexOf(file.type) !== false) {
 
                         var data = new FormData();
-                        data.append("PlacesPhotos[image]", file);
-                        data.append("PlacesPhotos[place_id]", <?=$model->id?>);
+                        data.append("RoomsPhotos[image]", file);
+                        data.append("RoomsPhotos[room_id]", <?=$model->id?>);
 
                         $.ajax({
-                            url: "/admin/places-photos/create",
+                            url: "/admin/rooms-photos/create",
                             processData: false,
                             contentType: false,
                             type: "post",
@@ -201,7 +182,7 @@ $this->title = $model->name(["ЕД", "ИМ"]);
                 blockUI(photo);
 
                 $.ajax({
-                    url: "/admin/places-photos/delete?id=" + id,
+                    url: "/admin/rooms-photos/delete?id=" + id,
                     type:"post",
                     success: function(){
                         photo.remove();

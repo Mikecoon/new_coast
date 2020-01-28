@@ -39,37 +39,43 @@ class Admin extends Module {
         "events" => [
             "url" => ["/admin/events/"],
             "title" => "Мероприятия",
-            "icon" => "fa fa-group",
+            "icon" => "fa fa-calendar",
         ],
 
         "sales" => [
             "url" => ["/admin/sales/"],
             "title" => "Акции",
-            "icon" => "fa fa-group",
+            "icon" => "fa fa-percent",
         ],
 
         "articles" => [
             "url" => ["/admin/articles/"],
             "title" => "Полезная информация",
-            "icon" => "fa fa-group",
+            "icon" => "fa fa-newspaper-o",
         ],
 
         "places" => [
             "url" => ["/admin/places/"],
-            "title" => "Места",
-            "icon" => "fa fa-group",
+            "title" => "Помещения",
+            "icon" => "fa fa-building",
         ],
 
         "albums" => [
             "url" => ["/admin/albums/"],
             "title" => "Фотоальбомы",
-            "icon" => "fa fa-group",
+            "icon" => "fa fa-camera",
         ],
 
         "banners" => [
             "url" => ["/admin/banners/"],
             "title" => "Баннеры",
-            "icon" => "fa fa-group",
+            "icon" => "fa fa-picture-o",
+        ],
+
+        "rooms" => [
+            "url" => ["/admin/rooms/"],
+            "title" => "Номера",
+            "icon" => "fa fa-bed",
         ],
 
     ];
@@ -95,12 +101,13 @@ class Admin extends Module {
         ],*/
 
         "default",
-        "users",
-        "events",
-        "sales",
-        "articles",
-        "places",
-        "albums",
         "banners",
+        "sales",
+        "events",
+        "places",
+        "rooms",
+        "albums",
+        "articles",
+        "users",
     ];
 }

@@ -2,22 +2,33 @@
 
 namespace app\controllers;
 
-use Yii;
-use app\components\AccessControl;
+use app\models\Rooms;
 use yii\web\Controller;
-use yii\filters\VerbFilter;
-use app\models\LoginForm;
-use app\models\ContactForm;
-use app\models\Settings;
+
 
 class RoomsController extends Controller {
 
     public function actionIndex() {
-        return $this->render('index');
+
+        $rooms = Rooms::find()
+            ->where(['visible' => 1])
+            ->orderBy('sort desc')
+            ->all();
+
+        return $this->render('index', [
+            'rooms' => $rooms
+        ]);
     }
 
-    public function actionView() {
-        return $this->render('view');
+    public function actionView($id) {
+
+        $model = Rooms::find()
+            ->where(['id' => $id, 'visible' => 1])
+            ->one();
+
+        return $this->render('view', [
+            'model' => $model
+        ]);
     }
 
 }

@@ -135,6 +135,7 @@ $this->registerJsFile("/js/site/index.js", [
             <h2>Почему нас выбирают</h2>
 
             <div class="grid">
+
                 <div class="advantage">
                     <h3>Доступность</h3>
 
@@ -146,6 +147,7 @@ $this->registerJsFile("/js/site/index.js", [
                         на природе или у бассейна.
                     </div>
                 </div>
+
                 <div class="advantage">
                     <h3>Расположение</h3>
 
@@ -154,6 +156,7 @@ $this->registerJsFile("/js/site/index.js", [
                         для яхт и катеров и мариной на 100 мест.
                     </div>
                 </div>
+
                 <div class="advantage">
                     <h3>Активный отдых</h3>
 

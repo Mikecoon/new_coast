@@ -6,25 +6,25 @@ use Yii;
 use app\components\Model;
 use app\components\behaviors\FileBehavior;
 /**
- * Модель для таблицы "albums_photos".
+ * Модель для таблицы "rooms_photos".
  *
  * @property integer $id
- * @property integer $album_id
+ * @property integer $room_id
  * @property integer $image
  * @property integer $sort
  */
-class AlbumsPhotos extends Model {
+class RoomsPhotos extends Model {
 
     /**
     * Название модели
     */
-    public static $modelName = "Фотографии";
+    public static $modelName = "Фотографии комнат";
 
     /**
      * @inheritdoc
      */
     public static function tableName() {
-        return 'albums_photos';
+        return 'rooms_photos';
     }
 
     /**
@@ -35,7 +35,7 @@ class AlbumsPhotos extends Model {
            'file' => [
                 'class' => FileBehavior::className(),
                 'attributes' => [
-                     'image' => ['type' => 'image']
+                     'image' => ['type' => 'image', 'size' => [755, 400]]
                 ]
             ]
        ]);
@@ -47,8 +47,8 @@ class AlbumsPhotos extends Model {
      */
     public function rules() {
         return [
-            [['album_id'], 'required'],
-            [['album_id', 'sort'], 'integer'],
+            [['room_id'], 'required'],
+            [['room_id', 'sort'], 'integer'],
             [['image'], 'image' , 'extensions' => ['jpg','jpeg','png']]
         ];
     }
@@ -59,7 +59,7 @@ class AlbumsPhotos extends Model {
     public function attributeLabels() {
         return [
             'id' => 'ID',
-            'album_id' => 'Альбом',
+            'room_id' => 'Альбом',
             'image' => 'Фотография',
             'sort' => 'Сортировка',
         ];

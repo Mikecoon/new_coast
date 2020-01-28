@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * @var $this \app\components\View
+ * @var $model \app\models\Rooms
+ */
+
 use app\assets\DatepickerAsset;
 use app\components\widgets\BookWidget\BookWidget;
 use app\components\widgets\CallbackWidget\CallbackWidget;
@@ -15,24 +20,15 @@ $this->registerJsFile("/js/rooms/view.js", [
     'depends' => \yii\web\JqueryAsset::class
 ]);
 
-$photos = [
-    '/images/rooms/view/photo-1.jpg',
-    '/images/rooms/view/photo-2.jpg',
-    '/images/rooms/view/photo-1.jpg',
-    '/images/rooms/view/photo-2.jpg',
-];
-
 ?>
 
 
 <div id="rooms-view">
-
     <div class="hero">
-
         <div class="container">
             <div class="content">
-                <h1>«Стандарт Плюс» с одной двуспальной кроватью</h1>
-                <div class="price">от 2700 руб.</div>
+                <h1><?=$model->name?></h1>
+                <div class="price">от <?=number_format($model->start_price, 0,'', ' ')?> руб.</div>
             </div>
         </div>
     </div>
@@ -45,43 +41,25 @@ $photos = [
 
                     <div class="param">
                         <div class="title">Количество гостей</div>
-                        <div class="value">2 гостя + 1 доп. место</div>
+                        <div class="value"><?=$model->capacity?></div>
                     </div>
 
                     <div class="param">
                         <div class="title">Площадь номера</div>
-                        <div class="value">20 м<sup>2</sup></div>
+                        <div class="value"><?=$model->square?> м<sup>2</sup></div>
                     </div>
                 </div>
 
                 <div class="col-md-8">
 
                     <h2>Описание</h2>
-
-                    <p>
-                        Номер «Стандарт» с двумя кроватями – это идеальный выбор для двухместного размещения. Оснащение
-                        включает в себя все необходимые для наиболее комфортабельного отдыха. Интерьер выполнен в
-                        приятных мягких цветах
-                        и располагает, как для спокойного отдыха, так и для результативной работы.
-                    </p>
+                    <p><?=$model->description?></p>
 
                     <h2>Удобства</h2>
-
                     <ul class="facilities">
-                        <li>Две кровати</li>
-                        <li>Два мягких кресла</li>
-                        <li>Просторный шкаф-купе</li>
-                        <li>Письменный стол</li>
-                        <li>Телефон</li>
-                        <li>Бассейн, сауна</li>
-                        <li>Настольный теннис</li>
-                        <li>Кондиционер</li>
-                        <li>Телевизор</li>
-                        <li>Мини-холодильник</li>
-                        <li>Ванная комната</li>
-                        <li>Фен</li>
-                        <li>Wi-fi</li>
-                        <li>Автостоянка при въезде в отель</li>
+                        <? foreach (explode("\r", $model->facilities) as $facility): ?>
+                            <li><?=$facility?></li>
+                        <? endforeach;?>
                     </ul>
 
                 </div>
@@ -89,7 +67,9 @@ $photos = [
         </div>
     </div>
 
-    <?= PhotosSliderWidget::widget(['photos' => $photos]) ?>
+    <?= PhotosSliderWidget::widget(['photos' => array_map(function ($photo) {
+        return $photo->image;
+    }, $model->photos)]) ?>
 
     <?= CallbackWidget::widget() ?>
 
