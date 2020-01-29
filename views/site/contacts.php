@@ -59,9 +59,6 @@ $this->registerJsFile("/js/site/contacts.js", [
                         <a class="yandex-maps" href="#"><img src="/images/site/icons/yandex-maps.svg" alt=""></a>
                         <a class="google-maps" href="#"><img src="/images/site/icons/google-maps.svg" alt=""></a>
                     </div>
-
-
-
                 </div>
 
                 <div class="col-md-6">
