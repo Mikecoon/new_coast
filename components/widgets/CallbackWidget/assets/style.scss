@@ -1,0 +1,37 @@
+.callback-widget{
+	height: 147px;
+	background: {
+		image: url('/images/site/callback-widget/background.jpg');
+		position: center;
+		size: cover;
+	};
+
+	.container {
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		&:before, &:after {display: none}
+	}
+
+	h3 {
+		color: white;
+		font-size: 35px;
+	}
+
+	p {
+		color: white;
+		font-size: 18px;
+	}
+
+	.btn {
+		background-color: white;
+		color: #333333;
+
+		&:hover {
+			color: white;
+			background-color: #333333;
+		}
+	}
+}

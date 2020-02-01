@@ -1,0 +1,78 @@
+{
+    "name": "mikefinch/ensofon",
+    "description": "Ensolab template project",
+    "keywords": ["yii2", "framework", "basic", "project template"],
+    "homepage": "http://www.ensolab.ru/",
+    "type": "project",
+    "license": "BSD-3-Clause",
+    "support": {
+        "issues": "https://github.com/yiisoft/yii2/issues?state=open",
+        "forum": "http://www.yiiframework.com/forum/",
+        "wiki": "http://www.yiiframework.com/wiki/",
+        "irc": "irc://irc.freenode.net/yii",
+        "source": "https://github.com/yiisoft/yii2"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@bitbucket.org:DarkMedveD/ensofon.git"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "yiisoft/yii2": ">=2.0.5",
+        "yiisoft/yii2-bootstrap": "*",
+        "yiisoft/yii2-swiftmailer": "*",
+        "fxp/composer-asset-plugin": "^1.2.0",
+        "szaboolcs/yii2-invisible-recaptcha": "dev-master",
+        "2amigos/yii2-ckeditor-widget": "^2.2",
+        "sunhater/kcfinder": "dev-master"
+    },
+    "require-dev": {
+        "yiisoft/yii2-debug": "~2.0.0",
+        "yiisoft/yii2-gii": "~2.0.0",
+        "yiisoft/yii2-faker": "~2.0.0",
+        "codeception/base": "^2.2.3",
+        "codeception/verify": "~0.3.1",
+        "codeception/specify": "~0.4.3"
+    },
+    "config": {
+        "process-timeout": 1800,
+        "preferred-install": "dist"
+    },
+    "scripts": {
+        "post-create-project-cmd": [
+            "yii\\composer\\Installer::postCreateProject",
+            "app\\components\\Installer::run",
+            "php yii migrate --interactive=0 #"
+        ]
+    },
+
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+
+    "autoload": {
+        "psr-4": {
+            "app\\components\\": "./components"
+        }
+    },
+
+    "extra": {
+        "yii\\composer\\Installer::postCreateProject": {
+            "setPermission": [
+                {
+                    "runtime": "0777",
+                    "web/assets": "0777",
+                    "yii": "0755"
+                }
+            ],
+            "generateCookieValidationKey": [
+                "config/web.php"
+            ]
+        },
+        "asset-installer-paths": {
+            "npm-asset-library": "vendor/npm",
+            "bower-asset-library": "vendor/bower"
+        }
+    }
+}

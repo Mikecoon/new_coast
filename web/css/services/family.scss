@@ -1,0 +1,79 @@
+#services-page {
+	.hero {
+		background-image: url('/images/services/family/hero.jpg');
+	}
+
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 15px;
+		margin: 100px 0;
+
+		background: {
+			size: cover;
+			position: center;
+		};
+
+		a {
+			height: 280px;
+			display: block;
+			padding: 30px;
+			text-decoration: none;
+			position: relative;
+
+			&.wide {
+				grid-column-start: 1;
+				grid-column-end: 3;
+			}
+
+			.title {
+				color: white;
+				font-size: 30px;
+				line-height: 130%;
+				font-weight: bold;
+				position: relative;
+				z-index: 2;
+				text-shadow: 0 0 10px rgba(0,0,0,0.5);
+			}
+
+			.description {
+				color: white;
+				font-size: 16px;
+				position: relative;
+				z-index: 2;
+				margin-top: 10px;
+				line-height: 22px;
+				opacity: 0;
+				transition: 0.2s opacity;
+			}
+
+			.btn {
+				position: absolute;
+				bottom: 30px;
+				z-index: 2;
+				left: 30px;
+				opacity: 0;
+				transition: 0.2s opacity;
+			}
+
+			&::after {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				content: '';
+				background: linear-gradient(0deg, rgba(0, 56, 104, 0.9), rgba(0, 56, 104, 0.9));
+				opacity: 0;
+				transition: 0.2s opacity;
+			}
+
+			&:hover {
+				&::after, .description, .btn {
+					opacity: 1;
+				}
+			}
+
+		}
+	}
+}

@@ -1,0 +1,148 @@
+#sales-index {
+
+	.hero {
+		padding-top: 100px;
+		background: {
+			image: url('/images/sales/index/hero.jpg');
+			size: cover;
+			position: center;
+		};
+
+		.content {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 500px;
+		}
+
+		h1 {
+			color: white;
+			font-size: 36px;
+			line-height: 47px;
+			margin: 0;
+		}
+	}
+
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 15px;
+		margin: 100px 0;
+
+		background: {
+			size: cover;
+			position: center;
+		};
+
+		a {
+			height: 280px;
+			background: red;
+			display: block;
+			padding: 30px;
+			text-decoration: none;
+			position: relative;
+
+			.title {
+				color: white;
+				font-size: 21px;
+				line-height: 130%;
+				font-weight: bold;
+				position: relative;
+				z-index: 2;
+			}
+
+			.description {
+				color: white;
+				font-size: 16px;
+				position: relative;
+				z-index: 2;
+				margin-top: 10px;
+				line-height: 22px;
+				opacity: 0;
+				transition: 0.2s opacity;
+			}
+
+			.btn {
+				position: absolute;
+				bottom: 30px;
+				z-index: 2;
+				left: 30px;
+				right: 30px;
+				opacity: 0;
+				transition: 0.2s opacity;
+			}
+
+			&::after {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				content: '';
+				background: linear-gradient(0deg, rgba(0, 56, 104, 0.9), rgba(0, 56, 104, 0.9));
+				opacity: 0;
+				transition: 0.2s opacity;
+			}
+
+			&:hover {
+				&::after, .description, .btn {
+					opacity: 1;
+				}
+			}
+
+		}
+	}
+
+	.about {
+		margin-bottom: 100px;
+
+		h2 {
+			font-size: 35px;
+			line-height: 45px;
+			color: #333333;
+			margin-top: 43px;
+			margin-bottom: 15px;
+		}
+
+		p {
+			font-size: 16px;
+			color: #333333;
+			line-height: 24px;
+
+			&.hidden {
+				display: none;
+			}
+		}
+
+		.read-more {
+			text-decoration: none;
+			border-bottom: 1px dashed;
+			padding-bottom: 2px;
+			font-size: 16px;
+			color: #333333;
+			font-weight: bold;
+
+		}
+
+		.image {
+			position: relative;
+			img {
+				display: block;
+			}
+
+
+			&::after {
+				width: 562px;
+				height: 200px;
+				border: 6px solid #F68520;
+				box-sizing: border-box;
+				content: '';
+				position: absolute;
+				bottom: -60px;
+				right: -60px;
+				z-index: -1;
+			}
+		}
+	}
+}

@@ -1,0 +1,68 @@
+#schedule-index .hero {
+  padding-top: 100px;
+  background-image: url("/images/site/schedule/hero.jpg");
+  background-size: cover;
+  background-position: center; }
+  #schedule-index .hero .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 500px; }
+  #schedule-index .hero h1 {
+    color: white;
+    font-size: 36px;
+    line-height: 47px;
+    margin: 0; }
+#schedule-index .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+  margin: 100px 0;
+  background-size: cover;
+  background-position: center; }
+  #schedule-index .grid a {
+    height: 280px;
+    background: red;
+    display: block;
+    padding: 30px;
+    text-decoration: none;
+    position: relative; }
+    #schedule-index .grid a .title {
+      color: white;
+      font-size: 21px;
+      line-height: 130%;
+      font-weight: bold;
+      position: relative;
+      z-index: 2; }
+    #schedule-index .grid a .description {
+      color: white;
+      font-size: 16px;
+      position: relative;
+      z-index: 2;
+      margin-top: 10px;
+      line-height: 22px;
+      opacity: 0;
+      transition: 0.2s opacity; }
+    #schedule-index .grid a .btn {
+      position: absolute;
+      bottom: 30px;
+      z-index: 2;
+      left: 30px;
+      right: 30px;
+      opacity: 0;
+      transition: 0.2s opacity; }
+    #schedule-index .grid a::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      content: '';
+      background: linear-gradient(0deg, rgba(0, 56, 104, 0.9), rgba(0, 56, 104, 0.9));
+      opacity: 0;
+      transition: 0.2s opacity; }
+    #schedule-index .grid a:hover::after, #schedule-index .grid a:hover .description, #schedule-index .grid a:hover .btn {
+      opacity: 1; }
+
+/*# sourceMappingURL=index.css.map */

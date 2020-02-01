@@ -1,0 +1,153 @@
+#entertainment-page {
+	.hero {
+		background-image: url("/images/entertainment/restaurants/hero.jpg");
+	}
+
+	.content-row {
+		display: flex;
+		margin: 100px -15px 150px;
+		align-items: stretch;
+
+		.text, .image {
+			margin: 0 15px;
+			width: 100%;
+		}
+
+		.text {
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+
+			h2 {
+				font-size: 35px;
+				line-height: 47px;
+				color: #333333;
+				margin: 0;
+			}
+
+			ul {
+				padding-left: 0;
+
+				li {
+					list-style: none;
+					display: flex;
+					font-size: 16px;
+					line-height: 24px;
+					color: #333333;
+
+					&:before {
+						content: '';
+						width: 15px;
+						height: 1px;
+						margin-top: 9px;
+						background-color: black;
+						margin-right: 10px;
+						display: block;
+						flex-shrink: 0;
+					}
+				}
+
+			}
+
+		}
+
+		.image {
+			position: relative;
+
+			> img {
+				width: 100%;
+				display: block;
+			}
+
+			.slider-wrapper {
+				position: relative;
+				width: 200%;
+			}
+
+			.slide {
+				img {
+					width: 100%;
+				}
+			}
+
+			.tns-controls {
+				width: 50%;
+				display: flex;
+				justify-content: flex-end;
+				margin-bottom: 10px;
+
+				button {
+					padding: 10px;
+					background: none;
+					border: none;
+					display: block;
+
+					img {
+						display: block;
+					}
+
+					&[data-controls='prev'] {
+						transform: rotate(180deg);
+
+					}
+				}
+			}
+
+			&::after {
+				width: 562px;
+				height: 350px;
+				background: #003868;
+				position: absolute;
+				bottom: -60px;
+				right: -150px;
+				content: '';
+				z-index: -1;
+			}
+		}
+
+		.buttons {
+			display: flex;
+			margin-top: 30px;
+
+			.solid {
+				background: #003868;
+				margin-right: 15px;
+				border: 1px solid #003868;
+
+				&:hover {
+					background: white;
+				}
+			}
+
+			.border {
+				border: 1px solid #003868;
+				color: #003868;
+
+				&:hover {
+					background: #003868;
+					color: white;
+				}
+			}
+		}
+
+		&.reverse {
+			flex-direction: row-reverse;
+
+			.text {
+				padding-left: 80px;
+			}
+
+			.image::after {
+				right: auto;
+				left: -150px;
+			}
+
+			.slider-wrapper {
+				left: -100%;
+			}
+		}
+
+
+	}
+  
+}

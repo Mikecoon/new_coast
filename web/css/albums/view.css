@@ -1,0 +1,84 @@
+#albums-view .hero {
+  padding-top: 100px;
+  background-image: url("/images/albums/index/hero.jpg");
+  background-size: cover;
+  background-position: center; }
+  #albums-view .hero .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 500px; }
+  #albums-view .hero h1 {
+    color: white;
+    font-size: 36px;
+    line-height: 47px;
+    margin: 0; }
+#albums-view .photos-slider-wrapper {
+  position: relative; }
+  #albums-view .photos-slider-wrapper .tns-controls {
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    max-width: 70vw;
+    margin: 0 auto;
+    pointer-events: none;
+    position: absolute;
+    top: 100px;
+    height: 65vh; }
+    #albums-view .photos-slider-wrapper .tns-controls button {
+      pointer-events: all;
+      padding: 10px;
+      background: none;
+      border: none;
+      display: block;
+      outline: none !important; }
+      #albums-view .photos-slider-wrapper .tns-controls button img {
+        display: block; }
+      #albums-view .photos-slider-wrapper .tns-controls button[data-controls='next'] {
+        transform: rotate(180deg); }
+  #albums-view .photos-slider-wrapper .photos {
+    margin: 100px 0 50px; }
+    #albums-view .photos-slider-wrapper .photos .slide {
+      position: relative; }
+      #albums-view .photos-slider-wrapper .photos .slide:after {
+        background-color: rgba(0, 45, 104, 0.7);
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        right: 15px;
+        bottom: 0;
+        z-index: 2;
+        opacity: 1;
+        transition: 0.2s opacity; }
+      #albums-view .photos-slider-wrapper .photos .slide img {
+        height: 65vh; }
+      #albums-view .photos-slider-wrapper .photos .slide.tns-slide-active + .tns-slide-active:after {
+        opacity: 0; }
+      #albums-view .photos-slider-wrapper .photos .slide.tns-slide-active + .tns-slide-active + .tns-slide-active:after {
+        opacity: 1; }
+  #albums-view .photos-slider-wrapper .navigation {
+    margin-bottom: 100px; }
+    #albums-view .photos-slider-wrapper .navigation ul {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, 150px);
+      grid-gap: 30px;
+      justify-content: center; }
+      #albums-view .photos-slider-wrapper .navigation ul li {
+        list-style: none;
+        border: 5px solid transparent;
+        transition: 0.2s border-width;
+        outline: none !important;
+        cursor: pointer; }
+        #albums-view .photos-slider-wrapper .navigation ul li img {
+          width: 100%;
+          height: 100px;
+          object-fit: cover;
+          display: block; }
+        #albums-view .photos-slider-wrapper .navigation ul li.tns-nav-active {
+          border-color: #003868; }
+
+/*# sourceMappingURL=view.css.map */

@@ -1,0 +1,59 @@
+#entertainment-page {
+  max-width: 100vw;
+  overflow-x: hidden; }
+  #entertainment-page .hero {
+    padding-top: 100px;
+    background-size: cover;
+    background-position: center; }
+    #entertainment-page .hero .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 500px; }
+    #entertainment-page .hero h1 {
+      color: white;
+      font-size: 36px;
+      line-height: 47px;
+      margin: 0; }
+    #entertainment-page .hero .btn {
+      background-color: white;
+      margin-top: 15px;
+      max-width: 274px;
+      width: 100%;
+      color: #333333;
+      cursor: pointer; }
+  #entertainment-page .content {
+    padding: 100px 0; }
+    #entertainment-page .content p {
+      font-size: 18px;
+      color: #333333;
+      line-height: 24px; }
+      #entertainment-page .content p + p {
+        margin-top: 30px; }
+    #entertainment-page .content h2 {
+      color: #333333;
+      font-size: 24px;
+      margin-top: 40px; }
+    #entertainment-page .content ul {
+      padding-left: 0; }
+      #entertainment-page .content ul li {
+        list-style: none;
+        display: flex;
+        font-size: 18px;
+        line-height: 24px;
+        color: #333333; }
+        #entertainment-page .content ul li:before {
+          content: '';
+          width: 15px;
+          height: 1px;
+          margin-top: 9px;
+          background-color: black;
+          margin-right: 10px;
+          display: block;
+          flex-shrink: 0; }
+    #entertainment-page .content .hint {
+      color: #A7ABBE;
+      margin-top: 0; }
+
+/*# sourceMappingURL=common.css.map */

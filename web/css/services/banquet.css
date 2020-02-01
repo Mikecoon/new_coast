@@ -1,0 +1,22 @@
+#services-page .hero {
+  background-image: url("/images/services/banquet/hero.jpg"); }
+#services-page .content-row .buttons {
+  display: flex;
+  margin-top: 30px; }
+  #services-page .content-row .buttons .solid {
+    background: #003868;
+    margin-right: 15px;
+    border: 1px solid #003868; }
+    #services-page .content-row .buttons .solid:hover {
+      background: white; }
+  #services-page .content-row .buttons .border {
+    border: 1px solid #003868;
+    color: #003868; }
+    #services-page .content-row .buttons .border:hover {
+      background: #003868;
+      color: white; }
+#services-page .content-row .remark {
+  color: #A7ABBE;
+  font-size: 14px; }
+
+/*# sourceMappingURL=banquet.css.map */

@@ -1,0 +1,45 @@
+#albums-index .hero {
+  padding-top: 100px;
+  background-image: url("/images/albums/index/hero.jpg");
+  background-size: cover;
+  background-position: center; }
+  #albums-index .hero .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 500px; }
+  #albums-index .hero h1 {
+    color: white;
+    font-size: 36px;
+    line-height: 47px;
+    margin: 0; }
+#albums-index .albums {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  margin: 100px 0; }
+  #albums-index .albums .album {
+    height: 200px;
+    overflow: hidden;
+    position: relative; }
+    #albums-index .albums .album img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1);
+      transition: 0.2s transform; }
+    #albums-index .albums .album .title {
+      position: absolute;
+      color: white;
+      top: 30px;
+      left: 30px;
+      font-size: 22px;
+      font-weight: bold;
+      font-family: "Roboto Slab", sans-serif;
+      text-shadow: 0 0 10px black;
+      z-index: 10; }
+    #albums-index .albums .album:hover img {
+      transform: scale(1.05); }
+
+/*# sourceMappingURL=index.css.map */

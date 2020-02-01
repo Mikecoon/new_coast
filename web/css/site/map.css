@@ -1,0 +1,28 @@
+#site-map .hero {
+  padding-top: 100px;
+  background-image: url("/images/site/map/hero.jpg");
+  background-size: cover;
+  background-position: center; }
+  #site-map .hero .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 500px; }
+  #site-map .hero h1 {
+    color: white;
+    font-size: 36px;
+    line-height: 47px;
+    margin: 0; }
+  #site-map .hero p {
+    max-width: 659px;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    line-height: 20px; }
+#site-map .main-image {
+  width: 100%;
+  display: block;
+  margin-top: 100px; }
+
+/*# sourceMappingURL=map.css.map */

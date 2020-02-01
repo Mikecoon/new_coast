@@ -1,0 +1,42 @@
+.contacts-widget {
+
+  background: {
+    image: url("/images/site/pricing/contacts.jpg");
+    size: cover;
+    position: center;
+  };
+
+  .contacts-widget-content {
+    height: 194px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h2 {
+      color: white;
+      font-size: 35px;
+      line-height: 47px;
+    }
+
+    a {
+      display: block;
+      text-decoration: none;
+      color: white;
+      margin-bottom: 15px;
+      font-size: 24px;
+      line-height: 29px;
+      text-align: right;
+
+
+      span {
+        border-bottom: 1px dashed;
+        padding-bottom: 2px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+}
