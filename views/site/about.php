@@ -35,7 +35,7 @@ $this->registerJsFile("/js/site/about.js", [
 
     <?=BookWidget::widget()?>
 
-<<<<<<< HEAD
+
     <div class="services" style="margin:50px 0 0">
 
         <div class="container">
@@ -46,9 +46,7 @@ $this->registerJsFile("/js/site/about.js", [
             </p>
         </div>
     </div>
-=======
 
->>>>>>> de80cc4f431a7e0b2b4d83a8e5541a8c09d6d7ec
     <div class="advantages">
 
         <div class="container">
@@ -91,11 +89,8 @@ $this->registerJsFile("/js/site/about.js", [
                     </div>
                 </div>
                 <div class="advantage">
-<<<<<<< HEAD
                     <h3>Банкетные площадки и шатры</h3>
-=======
-                    <h3>Организация мероприятий</h3>
->>>>>>> de80cc4f431a7e0b2b4d83a8e5541a8c09d6d7ec
+
 
                     <div class="content">
                         Мы рады предложить Вам широкий спектр профессиональных услуг по организации бизнес-мероприятий, деловых встреч, хранению и обслуживанию водной техники, проведению корпоративных праздничных вечеров, свадеб под шатром
@@ -118,49 +113,32 @@ $this->registerJsFile("/js/site/about.js", [
     <div class="services">
 
         <div class="container">
-<<<<<<< HEAD
+
             <h2>Дополнительные услуги отеля</h2>
 
             <div id="services-slider">
                 <a class="image" href="/services/events">
                     <div class="title">Боулинг</div>
-=======
-            <h2>Наши услуги</h2>
 
-            <p>
-                Шумный город, рабочие будни, занятые делами мысли, постоянный цейтнот — а так хочется отдохнуть,
-                уехать, пусть даже на пару дней, в красивое место на природе, остановить эту постоянную суету,
-                освободить мысли и, наконец, насладиться отдыхом! Мы приготовили уютные номера в
-                нашем отеле, вкусные угощения и интересные мероприятия и развлечения.
-            </p>
-
-            <div id="services-slider">
-                <a class="image" href="/services/events">
-                    <div class="title">Конференции</div>
->>>>>>> de80cc4f431a7e0b2b4d83a8e5541a8c09d6d7ec
                     <img src="/images/site/about/services/1.jpg" alt="">
                 </a>
 
                 <a class="image" href="/services/banquet">
-<<<<<<< HEAD
+
                     <div class="title">Банный комплекс</div>
-=======
-                    <div class="title">Банкеты</div>
->>>>>>> de80cc4f431a7e0b2b4d83a8e5541a8c09d6d7ec
+
                     <img src="/images/site/about/services/2.jpg" alt="">
                 </a>
 
                 <a class="image" href="/services/wedding">
-<<<<<<< HEAD
+
                     <div class="title">Бассейн</div>
-=======
-                    <div class="title">Свадьбы</div>
->>>>>>> de80cc4f431a7e0b2b4d83a8e5541a8c09d6d7ec
+
                     <img src="/images/site/about/services/3.jpg" alt="">
                 </a>
 
                 <a class="image" href="/services/family">
-<<<<<<< HEAD
+
                     <div class="title">СПА-комплекс</div>
                     <img src="/images/site/about/services/4.jpg" alt="">
                 </a>
@@ -177,9 +155,7 @@ $this->registerJsFile("/js/site/about.js", [
 
                 <a class="image" href="/services/family">
                     <div class="title">Беседки</div>
-=======
-                    <div class="title">Развлечения<br>для всей семьи</div>
->>>>>>> de80cc4f431a7e0b2b4d83a8e5541a8c09d6d7ec
+
                     <img src="/images/site/about/services/4.jpg" alt="">
                 </a>
 

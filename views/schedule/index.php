@@ -28,12 +28,7 @@ $this->registerJsFile("/js/schedule/index.js", [
     <div class="container">
         <div class="grid">
             <? foreach ($events as $event): ?>
-<<<<<<< HEAD
                 <a href="/schedule/view?id=<?=$event->id?>" style="background: linear-gradient(to bottom, rgba(0,0,0, 100), rgba(0,0,0, 0)), url('<?=$event->image?>')">
-=======
-                <a href="/schedule/view?id=<?=$event->id?>" style="background-image: url('<?=$event->image?>')">
->>>>>>> de80cc4f431a7e0b2b4d83a8e5541a8c09d6d7ec
-
                     <div class="title"><?=$event->title?></div>
                     <div class="description"><?=$event->description?></div>
 
