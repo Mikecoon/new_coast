@@ -77,11 +77,19 @@ AppAsset::register($this);
         <a href="/">Главная страница</a>
         <a href="/about">О нас</a>
         <a href="/rooms">Номера</a>
+<<<<<<< HEAD
         <a href="/services">Организация мероприятий</a>
     </div>
     <div class="column">
         <a href="/schedule">Афиша мероприятий</a>
         <a href="/pricing">Цены</a>
+=======
+        <a href="/services">Дополнительные услуги</a>
+    </div>
+    <div class="column">
+        <a href="/schedule">Афиша мероприятий</a>
+        <a href="/pricing">Цены на услуги</a>
+>>>>>>> de80cc4f431a7e0b2b4d83a8e5541a8c09d6d7ec
         <a href="/sales">Скидки и акции</a>
         <a href="/albums">Фотогалерея</a>
     </div>

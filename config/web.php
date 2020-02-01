@@ -47,6 +47,7 @@ $config = [
 
         'assetManager' => [
             'converter' => [
+<<<<<<< HEAD
                 'commands' => [
                     'less' => ['css', 'lessc {from} {to} --no-color --source-map'],
                     'scss' => ['css', 'sass {from} {to} '],
@@ -55,6 +56,8 @@ $config = [
                     'coffee' => ['js', 'coffee -p {from} > {to}'],
                     'ts' => ['js', 'tsc --out {to} {from}'],
                 ],
+=======
+>>>>>>> de80cc4f431a7e0b2b4d83a8e5541a8c09d6d7ec
                 'class' => 'yii\web\AssetConverter',
                 'forceConvert' => isset($_GET['force'])? true : false
             ],

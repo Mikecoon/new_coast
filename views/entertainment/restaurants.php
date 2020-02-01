@@ -21,6 +21,40 @@ $this->registerJsFile("/js/entertainment/restaurants.js", [
     'depends' => \yii\web\JqueryAsset::class
 ]);
 
+<<<<<<< HEAD
+=======
+$articles = [
+    [
+        'title' => 'Эко-отель в Подмосковье',
+        'image' => '/images/services/index/useful-template.jpg',
+        'href' => '#'
+    ],
+
+    [
+        'title' => 'Эко-отель в Подмосковье',
+        'image' => '/images/services/index/useful-template.jpg',
+        'href' => '#'
+    ],
+
+    [
+        'title' => 'Эко-отель в Подмосковье',
+        'image' => '/images/services/index/useful-template.jpg',
+        'href' => '#'
+    ],
+
+    [
+        'title' => 'Эко-отель в Подмосковье',
+        'image' => '/images/services/index/useful-template.jpg',
+        'href' => '#'
+    ],
+
+    [
+        'title' => 'Эко-отель в Подмосковье',
+        'image' => '/images/services/index/useful-template.jpg',
+        'href' => '#'
+    ]
+];
+>>>>>>> de80cc4f431a7e0b2b4d83a8e5541a8c09d6d7ec
 ?>
 
 

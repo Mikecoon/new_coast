@@ -21,7 +21,11 @@
     font-size: 16px;
     line-height: 20px; }
 #site-about .advantages h2 {
+<<<<<<< HEAD
   margin-top: 50px;
+=======
+  margin-top: 100px;
+>>>>>>> de80cc4f431a7e0b2b4d83a8e5541a8c09d6d7ec
   font-size: 35px;
   line-height: 47px;
   color: #333333;
@@ -86,7 +90,11 @@
     font-size: 35px;
     line-height: 47px;
     color: #333333;
+<<<<<<< HEAD
     margin-bottom: 30px; }
+=======
+    margin-bottom: 0; }
+>>>>>>> de80cc4f431a7e0b2b4d83a8e5541a8c09d6d7ec
   #site-about .services p {
     font-size: 16px;
     line-height: 140%;

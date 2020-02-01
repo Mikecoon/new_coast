@@ -13,8 +13,12 @@
     color: white;
     font-size: 36px;
     line-height: 47px;
+<<<<<<< HEAD
     margin: 0;
     text-shadow: 0 0 15px #000; }
+=======
+    margin: 0; }
+>>>>>>> de80cc4f431a7e0b2b4d83a8e5541a8c09d6d7ec
 #schedule-view .page-content {
   padding: 100px 0; }
   #schedule-view .page-content p {
